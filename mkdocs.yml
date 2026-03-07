@@ -1,0 +1,55 @@
+site_name: xLandscape Training
+site_url: https://xlandscape.github.io/SETAC-Training/
+use_directory_urls: false
+plugins:
+  - search
+
+repo_url: https://github.com/xlandscape/SETAC-Training
+repo_name: SETAC-Training on GitHub
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: blue grey
+      accent: light blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: blue grey
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  icon:
+    logo: material/land-plots-marker
+  features:
+    - content.code.copy
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - toc.integrate
+
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
+
+nav:
+  - Home: 'index.md'
+  - Aquatic Invertebrates:
+    - Overview: 'xAquaticRisk-Invertebrates/index.md'
+    - Model Overview: 'xAquaticRisk-Invertebrates/xAquaticRisk-overview.md'
+  - Aquatic Plants:
+    - Overview: 'xAquaticRisk-Plants/index.md'
+  - Pollinators:
+    - Overview: 'xPollinator/index.md'
