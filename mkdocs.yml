@@ -49,6 +49,7 @@ nav:
   - Aquatic Invertebrates:
     - Overview: 'xAquaticRisk-Invertebrates/index.md'
     - Model Overview: 'xAquaticRisk-Invertebrates/xAquaticRisk-overview.md'
+    - Control Panel: 'xAquaticRisk-Invertebrates/controlpanel.md'
   - Aquatic Plants:
     - Overview: 'xAquaticRisk-Plants/index.md'
   - Pollinators:

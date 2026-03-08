@@ -4,6 +4,9 @@ Welcome to the **xLandscape Training** documentation — *Hands-on Landscape-bas
 
 This training covers practical application of the [xLandscape](https://github.com/xlandscape) modelling framework for landscape-scale ecological risk assessments of pesticides. The training is divided into three topic areas, each addressing a specific organism group and the corresponding xLandscape model.
 
+<img src="img/BeeForage Landscape nanobanana original.png" alt="xLandscape Training" width="1000"/>
+Dealing with questions around cultivated landscapes are the heart of the xLandscape development goals (ai generated, T Schad)
+
 ---
 
 ## Training Topics
@@ -38,3 +41,12 @@ xLandscape is an open-source, modular framework for spatiotemporally explicit la
 
 !!! info "Prerequisites"
     Participants are expected to have a basic familiarity with ecological risk assessment concepts and pesticide regulation. No prior programming experience is required.
+
+---
+
+## Contact
+
+For questions or further information, please contact:
+
+**Thorsten Schad** — [thorsten.schad@landwerk-ev.de](mailto:thorsten.schad@landwerk-ev.de)  
+**Sascha Bub** — [sascha.bub@rptu.de](mailto:sascha.bub@rptu.de)
