@@ -2,7 +2,7 @@
 
 This page provides a comprehensive reference for parameterising the xAquaticRisk landscape model. It describes the two supported parameterisation formats (`.xrun` and `.yaml`), all available parameters organised by section, and practical guidance for setting up simulation runs.
 
-For a quick-start walkthrough, see [Getting Started](../getstarted/getstarted.md). For the regulatory context that motivates these parameters, see [Regulatory Framework](regulatory-framework.md).
+For the regulatory context that motivates these parameters, see [Regulatory Framework](regulatory-framework.md).
 
 ---
 
@@ -485,4 +485,4 @@ See the [xrun Converter](../xrun-converter.md) page for full usage instructions 
 
 ## WebUI
 
-As an alternative to editing XML or YAML files manually, xAquaticRisk provides a **web-based user interface**. Start it via `webui.bat` at the model root. The WebUI exposes all parameters from this page in a form-based interface, generates `.xrun` files, and can launch simulation runs directly. See [Getting Started — WebUI](../getstarted/getstarted.md#running-xaquaticrisk) for details.
+As an alternative to editing XML or YAML files manually, xAquaticRisk provides a **web-based user interface**. Start it via `webui.bat` at the model root. The WebUI exposes all parameters from this page in a form-based interface, generates `.xrun` files, and can launch simulation runs directly.
