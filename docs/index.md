@@ -51,4 +51,6 @@ xLandscape is an open-source, modular framework for spatiotemporally explicit la
 For questions or further information, please contact:
 
 **Thorsten Schad** — [thorsten.schad@landwerk-ev.de](mailto:thorsten.schad@landwerk-ev.de)  
-**Sascha Bub** — [sascha.bub@rptu.de](mailto:sascha.bub@rptu.de)
+**Sascha Bub** — [sascha.bub@rptu.de](mailto:sascha.bub@rptu.de)  
+**Julian Heinrich** — [julian.heinrich@bayer.com](mailto:julian.heinrich@bayer.com)  
+**Sebastian Multsch** — [sebastian.multsch@basf.com](mailto:sebastian.multsch@basf.com)  

@@ -48,6 +48,8 @@ nav:
   - Home: 'index.md'
   - Landscape Modelling:
     - Overview: 'LandscapeModelling/index.md'
+  - xLandscape:
+    - Overview: 'xLandscape/index.md'
   - Aquatic Invertebrates:
     - Overview: 'xAquaticRisk-Invertebrates/index.md'
     - Model Overview: 'xAquaticRisk-Invertebrates/xAquaticRisk-overview.md'
