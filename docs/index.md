@@ -1,5 +1,7 @@
 ﻿# xLandscape Training
 
+## Welcome
+
 Welcome to the **xLandscape Training** documentation — *Hands-on Landscape-based Ecological Risk Assessment using the Open Source xLandscape Modelling Framework*.
 
 This training covers practical application of the [xLandscape](https://github.com/xlandscape) modelling framework for landscape-scale ecological risk assessments of pesticides. The training is divided into three topic areas, each addressing a specific organism group and the corresponding xLandscape model.
