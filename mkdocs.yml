@@ -4,8 +4,8 @@ use_directory_urls: false
 plugins:
   - search
 
-repo_url: https://github.com/xlandscape/xLandscapeTraining
-repo_name: xLandscapeTraining
+repo_url: https://github.com/xlandscape/SETAC-Training
+repo_name: SETAC-Training
 
 theme:
   name: material
@@ -47,7 +47,8 @@ markdown_extensions:
 
 nav:
   - Home: 'index.md'
-  - Introduction: 'introduction.md'
+  - Introduction:
+    - Overview: 'introduction.md'
     - Landscape Modelling: 'intro-landscapeModelling.md'
     - Real-world Challenges: 'intro-challenges.md'
     - xLandscape: 'intro-xLandscape.md'
