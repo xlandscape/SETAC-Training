@@ -11,8 +11,6 @@ Ref.:
 
 ## xPollinator
 
-## xToxicLoad
-
 ## xNTTP
 
 
