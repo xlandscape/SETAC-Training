@@ -3,6 +3,7 @@ name: Publish Docs to GitHub Pages
 on:
   release:
     types: [published]
+  workflow_dispatch:
 
 permissions:
   contents: write
