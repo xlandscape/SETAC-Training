@@ -10,13 +10,6 @@ In an xCP parameterisation, PPP use are typically defined related to land use ty
 
 Note: This section provides an introduction to xCP scenarios on a technical level with the intention to enable colleagues with technical experiance to build scenarios and to use xCP. However, we plan to develop a **graphical user interface** (GUI) that allows any user to intuitively build xCP scenarios. 
 
-## Example Scenarios
-The [xCropProtectionDemo](https://github.com/xlandscape/xCropProtectionDemo/tree/main) model is packaged with example scenarios located in the *scenario* folder. Example scenarios are of static land use types.  
-
-- A scenario in Rummen, Belgium ([*Rummen-full*](scenarios/rummen-scenario.md))
-
-- A subset of the Rummen-full scenario in Rummen, Belgium ([*Rummen-xCP-TestingScenario*](scenarios/rummen-subset.md))
-
 ## Custom Scenarios
 To create a new scenario for use with xCropProtection, users should follow these steps.
 
