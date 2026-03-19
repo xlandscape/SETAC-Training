@@ -17,37 +17,43 @@ Landscapes provide **Ecosystem Services** — benefits to society including food
 
 > Landscape modelling provides a means to make ecosystem services explicit, measurable, and comparable — supporting a holistic view on risk, trade-offs, and decision-making in environmental risk assessment and management.
 
-**Specific Protection Goals (SPGs)** in environmental risk assessment are derived directly from these ecosystem services of cultural landscapes.
+**Specific Protection Goals (SPGs)** in environmental risk assessment translate ecosystem service values into concrete, spatially explicit, and model-based regulatory protection targets. Landscape modelling is an essential connecting element between Ecosystem Services and SPGs.
 
 ---
 
 ## Landscape Modelling — A Broad Craft
 
-Landscape modelling in ERA covers a wide range of topics, spanning from the foundational data craft through to digital risk management in precision agriculture and integrated pest management.
+Landscape modelling in ERA covers a wide range of topics, spanning from the foundational data craft through to digital risk management in precision agriculture and integrated pest management. It can broadly be divided into two categories:
+
+- **Fundamental Craft** — the basic data, geoinformatics, and environmental-fate skills that underpin all landscape modelling work
+- **Modelling-related Topics** — the problem-oriented, integrative modelling that connects environmental processes, human activities, and risk endpoints
 
 ### Aspects in ERA
 
 Landscape modelling fulfils multiple roles in environmental risk assessment:
 
-| Aspect | Role |
-|--------|------|
-| **Communication** | Stakeholder involvement, transparency, risk communication |
-| **Integration** | Links exposure, fate, effect models and risk characterisation with SPGs |
-| **Holistic risk view** | Addresses baseline definition, comparative risk assessment, multiple stressors |
+| Aspect | Description |
+|--------|-------------|
+| **Integration** | Links pesticide use, exposure, environmental fate and effect models; integrates risk characterisation with Specific Protection Goals |
+| **Holistic risk view** | Addresses baseline definition, comparative risk assessment, and multiple stressors |
 | **Risk Management** | Supports landscape design, mitigation options, integrated pest management |
+| **Communication** | Stakeholder involvement, transparency, risk communication |
+| **EU initiatives** | Integration with further EU initiatives and research programmes |
+| **Uncertainty reduction** | Reduces uncertainty through spatially and temporally explicit representation |
 
 ### Disciplines
 
 Landscape modelling in ERA is inherently **interdisciplinary and integrative**, linking environmental processes, human activities, and risk modelling:
 
-GIS · Geoinformatics · Remote Sensing · Informatics · Computing · Digital Agriculture · Regulations · Modelling · Data Science · Communication
+GIS · Geoinformatics · Remote Sensing · Informatics · Computing · Digital Agriculture · Regulations · Modelling · Data Science · Communication · Exchange · Network · Community
 
 Core cross-disciplinary capabilities include:
 
-- **Ecological modelling** — basis for EFM endpoints and integrated risk/benefit analysis
-- **Environmental fate modelling** — the foundational craft; data-driven daily business
-- **Recovery and connectivity analysis** — demonstrates recovery potential for non-target populations (e.g. NTA, insecticide case studies)
-- **Spatially explicit landscape modelling** — purpose-driven representation of reality; supports regional risk management and digital twin approaches
+- **Ecological modelling** — basis for risk/effect endpoints and integrated risk/benefit analysis
+- **Environmental fate modelling** — the basic craft; data is the foundation and daily business
+- **Spatially explicit landscape modelling** — the supreme craft and core business; purpose-driven representation of reality
+- **Recovery and connectivity analysis** — demonstrates recovery potential for non-target populations (e.g. NTA, insecticide connectivity case studies)
+- **Regional risk management and digital twin** — supports digital agriculture, precision application, corporate sustainability
 
 ---
 
@@ -93,13 +99,46 @@ Key drivers:
 
 ---
 
-## Work Areas and Applications
+## Landscape Modelling as a Reference — Managing Complexity
 
-Landscape modelling is **more realistic than a standard scenario, but still a model of the world**. Approaches are purpose-driven and problem-oriented — only as complex as necessary for the question at hand.
+Landscape modelling is **more realistic than a standard scenario, but not the reality — still a model of the world**. Approaches, comprising models, components, and scenarios, are purpose-driven and problem-oriented, and are typically only as complex as necessary for the question at hand.
 
-> *"We work with models of reality — purpose-driven, tiered."*
+---
 
-### ERA Work Areas
+## Views to Landscape Modelling in ERA
+
+Landscape modelling sits at the intersection of multiple perspectives, each contributing a different lens:
+
+| Perspective | Key Attributes |
+|-------------|---------------|
+| **Scientific disciplines** | GIS · Geoinformatics · Remote Sensing · Informatics · Computing · Digital Agriculture · Regulations · Modelling · Data Science · Communication; collaborative community and exchange |
+| **Emerging holistic view** | Holistic risk assessment, multiple stressors, recovery modelling |
+| **Regulatory framing** | Cross-sectional topic across all species groups; no single 'Landscape Guidance'; explicit Tier-4 ('freestyle') higher-tier approach; Specific Protection Goals as the anchoring framework |
+| **ERA applications** | Higher-tier (Tier-4) risk assessment; ecosystem services, population and effect modelling; supporting-evidence strategy ("landscape-mechanistically informed"); landscape solutions to EnSa-EFM questions; digital agriculture integration |
+| **Landscape as the region** | Shaped by ecosystem processes and human activities; region of holistic view to risk and benefits |
+| **Management dimension** | Landscape management integrating multi-stakeholder interests; integrative modelling platform linking environment, agriculture, exposure, and effect modelling |
+| **Discipline base** | Environmental, agricultural, landscape ecology, and economy disciplines; pesticide environmental fate data and modelling; Integrated Pest Management |
+
+---
+
+## Daily Working Areas
+
+The range of landscape modelling work in ERA practice spans multiple focus areas:
+
+| Working Area | Examples and Topics |
+|---|---|
+| **Higher-tier risk assessment** | Aquatic organisms, NTA, NTP, Pollinators, Mammals, Off-field soil, Plant communities, Groundwater |
+| **Indirect effects and holistic risk** | Weed control indirect effects, holistic pesticide use scheme effects, system approaches, digital twins |
+| **Crop/use setting specifics** | Orchards, olives, stone/pome fruit, arable, railway verges, industrial vegetation management, golf, greenhouses |
+| **Field studies support** | Field study site selection and representativeness, study scope, site similarity analysis |
+| **Digital agriculture** | Precision application, residues in crop, environmental impact reduction, corporate sustainability |
+| **Geodata infrastructure** | GIS, remote sensing, geodata acquisition, preparation and analysis, field investigation, drone mapping, geodata services (e.g., weather) |
+| **Ecological research topics** | Insect decline, biodiversity, bee health, runoff and drainage refinement, groundwater vulnerability and monitoring, soil degradation |
+| **Communication** | Mapping and communication, web services |
+
+---
+
+## Work Areas and ERA Applications
 
 | Area | Description |
 |------|-------------|
@@ -109,15 +148,17 @@ Landscape modelling is **more realistic than a standard scenario, but still a mo
 | **Digital Agriculture** | Regional risk management and digital twin/Ag integration |
 | **Landscape solutions** | Addressing EnSa-EFM questions and landscape-scale management |
 
-### What Landscape Modelling Can Do
+### What Landscape Modelling Can Do — Our Vision
 
-Imagine having a tool where you can:
+> *"You have a tool at hand enabling you to build and run processes and models at landscape-level, using real-world data. You can adapt this tool to your problem. It's open source. You can make use of open developments done by your colleagues. You can run the landscape models on your laptop or large cloud systems."*
 
-- Select a region using real-world geodata (maps, drone data)
-- Define your regulatory or management problem
-- Get a spatially explicit, quantitative answer — from FOCUSsw ditch calculations to real-world regional assessments
+More specifically:
 
-This is the vision driving the xLandscape platform and spatiotemporally explicit landscape modelling in ERA.
+- The conceptual foundation is embedded into regulatory-scientific frameworks, with **tiered scenario development** — start on screening levels and increase detail as needed
+- Scenario services support users on request
+- **Consistency, freeze, and versioning** ensure full long-term availability and reproducibility within a regulatory context
+
+This is why an open, modular, and collaborative landscape modelling framework — **xLandscape** — is the route to take: models, components and scenarios, developed collaboratively because they are needed and not yet practically available.
 
 ---
 
@@ -127,7 +168,7 @@ This is the vision driving the xLandscape platform and spatiotemporally explicit
 2. Landscape modelling is a means to **realistically measure and objectively quantify** services and ecological conditions, for both research and decision support. In its most generic view, it encompasses a wide range of crafts and disciplines.
 3. In pesticide ERA and the current digital transformation, landscape-level risk assessment is becoming part of **Integrated Pest Management**. Landscape aspects appear as a cross-sectional topic across all species groups.
 4. In the specific ERA context, landscape modelling serves a range of purposes and applications. Spatiotemporally explicit landscape modelling **directly addresses SPG requirements** and has become a means for more realistic RA and management.
-5. We develop frameworks, models, and scenarios — via the **xLandscape** platform — because they are needed and not yet available in practically applicable form.
+5. We develop frameworks, models, and scenarios — via the **xLandscape** platform — because they are needed and do not yet exist or are not practically applicable.
 
 ---
 
