@@ -14,6 +14,9 @@ The demand for landscape-scale modelling in pesticide risk assessment is growing
 - **Integration of monitoring and modelling** — to continuously improve knowledge and validate predictions.
 - **Digital Agriculture and Digital Twins** — enabling *what-if* analyses for integrated pest control and environmental risk management (e.g., Destination Earth).
 
+> **Why do we develop a modular landscape modelling framework?**  
+> *Simply because there is a demand — and there is nothing like this available.*
+
 ---
 
 ## Conceptual Drivers for xLandscape
@@ -30,7 +33,18 @@ The xLandscape framework was designed around three key concepts:
 
 ## The Vision
 
-> *Imagine you have a question at hand — research, risk assessment, risk management, landscape design, or population protection — and you have a system where you can link geodata APIs, add process modules, run simulations, and analyse results (in natural language), all at scale, starting from your laptop.*
+**Imagine…** you are facing one of these challenges:
+
+- You are developing a new species effect model (e.g. amphibians, wild pollinators, beetles) for pesticide risk assessment and population protection.
+- You are interested in multiple pesticide exposure, toxicity, and effects across large regions.
+- You want to compare risks of pest control strategies under different baseline assumptions.
+- You study real-world effects of different risk management decisions and landscape design options.
+- You want to build a regional scenario (or digital twin) to study a range of protection goals and ecosystem services.
+- You want all this work to be consistent with related projects, fully versioned, and reproducible in a regulatory context.
+
+If you start from scratch, it's quite an effort. But if you can focus on your **focal expertise** and build on open, shared work from your colleagues — that changes everything.
+
+> *You have a tool at hand enabling you to build and run processes and models at landscape level, using real-world data. You can adapt this tool to your problem. It is open source. You can run landscape models on your laptop or large cloud systems. The conceptual foundation is embedded in regulatory-scientific frameworks, with tiered scenario development that lets you start quickly at a screening level and get more detailed as you proceed. Scenario services support you on request. Versioning ensures full long-term availability and reproducibility within a regulatory context.*
 
 xLandscape aims to make this possible: an open, AI-supportable platform where researchers can **build on what others have already done** rather than starting from scratch.
 
@@ -71,6 +85,26 @@ Individual **components** wrap existing models (TOXSWA, PRZM5, GUTS, StreamCom, 
 | Analysis | LP50, population exposure, reporting |
 | Environment | Weather, soil, elevation, hydrographic network |
 
+### Selected components
+
+| Component | Domain | Notes |
+|-----------|--------|-------|
+| Crop cultivation | Agriculture | Land use / crop calendar |
+| PPP use (xCropProtection) | Agriculture | Pesticide application scheduling |
+| xDrift | Exposure | In-field spray drift deposition |
+| xRunoff / xDrainage | Exposure | Surface runoff and drain flow |
+| PRZM5 / PrzmEU / PrzmUS | Exposure/Fate | Pesticide fate in soil and runoff |
+| Drainage-PEARL / Drainage-MACRO | Exposure/Fate | Drainage leaching models |
+| TOXSWA | Exposure/Fate | Pesticide fate in surface water |
+| Steps1234 | Exposure | Step 1–4 exposure modelling |
+| RunOffFilter / PECsoil / PlantResidue | Exposure | Off-field and terrestrial PECs |
+| GUTS (CVASI) | Effects | Individual survival under toxicant stress |
+| StreamCom / MASTEP | Effects | Stream community and population effects |
+| BeeHave / BeeForage | Effects | Honeybee colony and foraging models |
+| Land use/cover | Environment | Spatial landscape structure |
+| Weather, soil, elevation | Environment | Abiotic boundary conditions |
+| Hydrographic / topographic network | Environment | Stream and catchment routing |
+
 ### The xLandscape model ecosystem
 
 | Model | Focus |
@@ -93,7 +127,22 @@ xLandscape handles input variability (agriculture, environment, biology) and pro
 
 - **Discretisation** in space and time captures landscape heterogeneity.
 - **Monte Carlo simulation** samples from probability density functions for uncertain parameters.
-- **Multidimensional HDF5 data arrays** store and exchange all intermediate and final outputs (hydrology, exposure, effects) in a semantically consistent model space, accessible from R, Python, Jupyter, Matlab, KNIME, and more.
+- **Multidimensional HDF5 data arrays** store and exchange all intermediate and final outputs in a semantically consistent model space, accessible from R, Python, Jupyter, Matlab, Tableau, KNIME, and more.
+
+---
+
+## Technology: Multidimensional Data Arrays
+
+All intermediate and final model outputs are stored in **[HDF5](https://www.hdfgroup.org/)** — a format originally developed at the U.S. National Center for Supercomputing Applications and maintained by The HDF Group as a non-profit standard:
+
+| Data class | Examples |
+|-----------|----------|
+| Hydrology | water depth, flow rate |
+| Exposure | PPP use, PEC~sw~, PEC~sed~ |
+| Effects | individual mortality (SD/IT), population size |
+| Environment | bee forage availability |
+
+These arrays are accessible via any HDF5-compatible tool — enabling flexible, user-driven post-processing and analysis without vendor lock-in.
 
 ---
 
