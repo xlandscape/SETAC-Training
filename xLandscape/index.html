@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -690,6 +690,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#selected-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Selected components
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#the-xlandscape-model-ecosystem" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -710,6 +721,17 @@
     <span class="md-ellipsis">
       
         Propagating Real-World Variability
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technology-multidimensional-data-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Technology: Multidimensional Data Arrays
       
     </span>
   </a>
@@ -1125,6 +1147,10 @@
 <li><strong>Integration of monitoring and modelling</strong> — to continuously improve knowledge and validate predictions.</li>
 <li><strong>Digital Agriculture and Digital Twins</strong> — enabling <em>what-if</em> analyses for integrated pest control and environmental risk management (e.g., Destination Earth).</li>
 </ul>
+<blockquote>
+<p><strong>Why do we develop a modular landscape modelling framework?</strong><br />
+<em>Simply because there is a demand — and there is nothing like this available.</em></p>
+</blockquote>
 <hr />
 <h2 id="conceptual-drivers-for-xlandscape">Conceptual Drivers for xLandscape</h2>
 <p>The xLandscape framework was designed around three key concepts:</p>
@@ -1152,8 +1178,18 @@
 </table>
 <hr />
 <h2 id="the-vision">The Vision</h2>
+<p><strong>Imagine…</strong> you are facing one of these challenges:</p>
+<ul>
+<li>You are developing a new species effect model (e.g. amphibians, wild pollinators, beetles) for pesticide risk assessment and population protection.</li>
+<li>You are interested in multiple pesticide exposure, toxicity, and effects across large regions.</li>
+<li>You want to compare risks of pest control strategies under different baseline assumptions.</li>
+<li>You study real-world effects of different risk management decisions and landscape design options.</li>
+<li>You want to build a regional scenario (or digital twin) to study a range of protection goals and ecosystem services.</li>
+<li>You want all this work to be consistent with related projects, fully versioned, and reproducible in a regulatory context.</li>
+</ul>
+<p>If you start from scratch, it's quite an effort. But if you can focus on your <strong>focal expertise</strong> and build on open, shared work from your colleagues — that changes everything.</p>
 <blockquote>
-<p><em>Imagine you have a question at hand — research, risk assessment, risk management, landscape design, or population protection — and you have a system where you can link geodata APIs, add process modules, run simulations, and analyse results (in natural language), all at scale, starting from your laptop.</em></p>
+<p><em>You have a tool at hand enabling you to build and run processes and models at landscape level, using real-world data. You can adapt this tool to your problem. It is open source. You can run landscape models on your laptop or large cloud systems. The conceptual foundation is embedded in regulatory-scientific frameworks, with tiered scenario development that lets you start quickly at a screening level and get more detailed as you proceed. Scenario services support you on request. Versioning ensures full long-term availability and reproducibility within a regulatory context.</em></p>
 </blockquote>
 <p>xLandscape aims to make this possible: an open, AI-supportable platform where researchers can <strong>build on what others have already done</strong> rather than starting from scratch.</p>
 <p>Wherever your expertise lies — toxicology, hydrology, ecology, agronomy — the modular architecture lets you <strong>focus on your core competence</strong> while benefiting from a consistent, validated framework.</p>
@@ -1205,6 +1241,93 @@
 </tr>
 </tbody>
 </table>
+<h3 id="selected-components">Selected components</h3>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Domain</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Crop cultivation</td>
+<td>Agriculture</td>
+<td>Land use / crop calendar</td>
+</tr>
+<tr>
+<td>PPP use (xCropProtection)</td>
+<td>Agriculture</td>
+<td>Pesticide application scheduling</td>
+</tr>
+<tr>
+<td>xDrift</td>
+<td>Exposure</td>
+<td>In-field spray drift deposition</td>
+</tr>
+<tr>
+<td>xRunoff / xDrainage</td>
+<td>Exposure</td>
+<td>Surface runoff and drain flow</td>
+</tr>
+<tr>
+<td>PRZM5 / PrzmEU / PrzmUS</td>
+<td>Exposure/Fate</td>
+<td>Pesticide fate in soil and runoff</td>
+</tr>
+<tr>
+<td>Drainage-PEARL / Drainage-MACRO</td>
+<td>Exposure/Fate</td>
+<td>Drainage leaching models</td>
+</tr>
+<tr>
+<td>TOXSWA</td>
+<td>Exposure/Fate</td>
+<td>Pesticide fate in surface water</td>
+</tr>
+<tr>
+<td>Steps1234</td>
+<td>Exposure</td>
+<td>Step 1–4 exposure modelling</td>
+</tr>
+<tr>
+<td>RunOffFilter / PECsoil / PlantResidue</td>
+<td>Exposure</td>
+<td>Off-field and terrestrial PECs</td>
+</tr>
+<tr>
+<td>GUTS (CVASI)</td>
+<td>Effects</td>
+<td>Individual survival under toxicant stress</td>
+</tr>
+<tr>
+<td>StreamCom / MASTEP</td>
+<td>Effects</td>
+<td>Stream community and population effects</td>
+</tr>
+<tr>
+<td>BeeHave / BeeForage</td>
+<td>Effects</td>
+<td>Honeybee colony and foraging models</td>
+</tr>
+<tr>
+<td>Land use/cover</td>
+<td>Environment</td>
+<td>Spatial landscape structure</td>
+</tr>
+<tr>
+<td>Weather, soil, elevation</td>
+<td>Environment</td>
+<td>Abiotic boundary conditions</td>
+</tr>
+<tr>
+<td>Hydrographic / topographic network</td>
+<td>Environment</td>
+<td>Stream and catchment routing</td>
+</tr>
+</tbody>
+</table>
 <h3 id="the-xlandscape-model-ecosystem">The xLandscape model ecosystem</h3>
 <table>
 <thead>
@@ -1251,8 +1374,38 @@
 <ul>
 <li><strong>Discretisation</strong> in space and time captures landscape heterogeneity.</li>
 <li><strong>Monte Carlo simulation</strong> samples from probability density functions for uncertain parameters.</li>
-<li><strong>Multidimensional HDF5 data arrays</strong> store and exchange all intermediate and final outputs (hydrology, exposure, effects) in a semantically consistent model space, accessible from R, Python, Jupyter, Matlab, KNIME, and more.</li>
+<li><strong>Multidimensional HDF5 data arrays</strong> store and exchange all intermediate and final outputs in a semantically consistent model space, accessible from R, Python, Jupyter, Matlab, Tableau, KNIME, and more.</li>
 </ul>
+<hr />
+<h2 id="technology-multidimensional-data-arrays">Technology: Multidimensional Data Arrays</h2>
+<p>All intermediate and final model outputs are stored in <strong><a href="https://www.hdfgroup.org/">HDF5</a></strong> — a format originally developed at the U.S. National Center for Supercomputing Applications and maintained by The HDF Group as a non-profit standard:</p>
+<table>
+<thead>
+<tr>
+<th>Data class</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hydrology</td>
+<td>water depth, flow rate</td>
+</tr>
+<tr>
+<td>Exposure</td>
+<td>PPP use, PEC~sw~, PEC~sed~</td>
+</tr>
+<tr>
+<td>Effects</td>
+<td>individual mortality (SD/IT), population size</td>
+</tr>
+<tr>
+<td>Environment</td>
+<td>bee forage availability</td>
+</tr>
+</tbody>
+</table>
+<p>These arrays are accessible via any HDF5-compatible tool — enabling flexible, user-driven post-processing and analysis without vendor lock-in.</p>
 <hr />
 <h2 id="user-levels-and-roles">User Levels and Roles</h2>
 <p>xLandscape supports different levels of engagement — from model users applying pre-built scenarios to developers building new components and contributing to the framework. The training focuses on building familiarity across these roles.</p>
