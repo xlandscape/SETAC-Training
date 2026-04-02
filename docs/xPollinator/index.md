@@ -25,3 +25,5 @@ This section covers landscape-level risk assessment for **pollinator populations
 
 - [xPollinator GitHub Repository](https://github.com/xlandscape/xPollinator)
 - [xLandscape Framework](https://github.com/xlandscape)
+- [BeeView-server](https://github.com/xlandscape/BeeView-server)
+- [BeeView](https://github.com/xlandscape/BeeView)
