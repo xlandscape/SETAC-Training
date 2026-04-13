@@ -1,6 +1,6 @@
 # Landscape Modelling
 
-**Slide deck:** [SETAC xLandscape Training — (1) Landscape Modelling Intro](../static/SETAC_xLandscapeTraining%20-%20%281%29%20LandscapeModelling%20Intro%20v0.1.pptx?v=20260318)
+**Slide deck:** [SETAC xLandscape Training — (1) Landscape Modelling Intro](../static/SETAC_xLandscapeTraining%20-%20%281%29%20LandscapeModelling%20Intro%20v0.1.pdf)
 
 *This page follows the structure of the introductory lecture by Thorsten Schad (Landwerk e.V.).*
 
