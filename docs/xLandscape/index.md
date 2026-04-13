@@ -1,6 +1,6 @@
 # xLandscape
 
-**Slide deck:** [SETAC xLandscape Training — (2) xLandscape Intro](../static/SETAC_xLandscapeTraining%20-%20%282%29%20xLandscape%20Intro%20v0.1.pptx)
+**Slide deck:** [SETAC xLandscape Training — (2) xLandscape Intro](../static/SETAC_xLandscapeTraining%20-%20%282%29%20xLandscape%20Intro%20v0.1.pdf)
 
 ---
 
