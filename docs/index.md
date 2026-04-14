@@ -4,10 +4,13 @@
 
 Welcome to the **xLandscape Training** documentation — *Hands-on Landscape-based Ecological Risk Assessment using the Open Source xLandscape Modelling Framework*.
 
-This training covers practical application of the [xLandscape](https://github.com/xlandscape) modelling framework for landscape-scale ecological risk assessments of pesticides. The training is divided into three topic areas, each addressing a specific organism group and the corresponding xLandscape model.
+This training covers an introduction and practical application of the [xLandscape](https://github.com/xlandscape) modelling framework, with a focus on landscape-scale ecological risk assessments of pesticides. The training is divided into three topic areas, each addressing a specific organism group and the corresponding xLandscape model.
+
+**Intro slide deck:** [SETAC xLandscape Training - (0) Training Intro](static/SETAC_xLandscapeTraining%20-%20%280%29%20Training%20Intro%20v0.1.pdf)
 
 <img src="img/BeeForage Landscape nanobanana original.png" alt="xLandscape Training" width="1000"/>  
-Dealing with questions around cultivated landscapes are the heart of the xLandscape development goals (ai generated, T Schad)
+
+Dealing with questions around cultivated landscapes is the heart of the xLandscape development goals (ai generated, T Schad)  
 
 ---
 
@@ -15,7 +18,7 @@ Dealing with questions around cultivated landscapes are the heart of the xLandsc
 
 ### Aquatic Invertebrates
 
-Landscape-level aquatic risk assessment for invertebrate populations using the **xAquaticRisk** model. Topics include spray-drift deposition, environmental fate of pesticides in stream networks, and population-level effects using TKTD models (GUTS / StreamCom).
+Landscape-level aquatic risk assessment for invertebrate species using the **xAquaticRisk** model. Topics include pesticide use, exposure of aquatic systems due to spray-drift deposition, environmental fate of pesticides in stream networks, and effects to organisms using TKTD models (GUTS).  
 
 [Go to Aquatic Invertebrates training &rarr;](xAquaticRisk-Invertebrates/index.md)
 
@@ -23,7 +26,7 @@ Landscape-level aquatic risk assessment for invertebrate populations using the *
 
 ### Aquatic Plants
 
-Landscape-level aquatic risk assessment for macrophytes and algae using **xAquaticRisk** configured for aquatic plants. Topics include exposure modelling in surface water and effect assessment for aquatic plant communities.
+Landscape-level aquatic risk assessment for aquatic plants (algae, macrophytes, lemna) using **xAquaticRisk** configured for aquatic plants. Topics include exposure modelling in surface water (spray-drift, drainage) and effect assessment for aquatic plants.
 
 [Go to Aquatic Plants training &rarr;](xAquaticRisk-Plants/index.md)
 
@@ -31,7 +34,7 @@ Landscape-level aquatic risk assessment for macrophytes and algae using **xAquat
 
 ### Pollinators
 
-Landscape-level risk assessment for pollinator populations using the **xPollinator** model. Topics include exposure of honeybees and wild bees to pesticides in agricultural landscapes and population-level effect modelling.
+Landscape-level risk assessment for pollinator populations using the **xPollinator** model. Topics include exposure of honeybees to pesticides in agricultural landscapes and population-level effect modelling.
 
 [Go to Pollinators training &rarr;](xPollinator/index.md)
 
@@ -42,7 +45,7 @@ Landscape-level risk assessment for pollinator populations using the **xPollinat
 xLandscape is an open-source, modular framework for spatiotemporally explicit landscape modelling. It integrates a range of ecological and environmental process models as interoperable components, enabling comprehensive risk assessments at the landscape scale.
 
 !!! info "Prerequisites"
-    Participants are expected to have a basic familiarity with ecological risk assessment concepts and pesticide regulation. No prior programming experience is required.
+    The course is on introductory level. Basic familiarity with ecological risk assessment concepts and pesticide regulation are helpful but not required. Also, no prior programming experience is needed.
 
 ---
 
