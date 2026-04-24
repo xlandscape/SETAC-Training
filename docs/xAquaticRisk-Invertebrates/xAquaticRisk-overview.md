@@ -2,6 +2,20 @@
 
 Welcome to the xAquaticRisk (xAR) documentation. This documentation provides an **introduction** and will walk new users through **how to get started** with the xAquaticRisk landscape model, including explanations for **sample scenarios** and their use for assessing aquatic risks of pesticides.
 
+## Hands-on Training Context
+
+The accompanying hands-on training uses xAquaticRisk in a **higher-tier refinement context** for aquatic invertebrates. The exercise begins with a situation in which a lower-tier assessment suggests that risk cannot be excluded. From there, the workflow shows how xAquaticRisk can be used to represent exposure and effects more realistically across **space and time**.
+
+The hands-on part is organised around a regulatory problem formulation:
+
+- identifying the **environmental concern** for aquatic invertebrates
+- defining the relevant **Specific Protection Goal**
+- quantifying **surface-water exposure**
+- linking exposure to **effects and recovery**
+- evaluating whether realistic landscape conditions and mitigation measures change the regulatory conclusion
+
+**Related slide deck:** [SETAC xLandscape Training — (2a) Training Hands-on](../static/SETAC_xLandscapeTraining%20-%20%282a%29%20Training%20Hands-on%20v0.2.pdf)
+
 ## Background
 
 Today, **scientific models** make a great contribution to understanding and predicting the consequences of how we cultivate the landscapes we are living in. Based on present knowledge and together with data, models have become a key instrument in decision making.  
