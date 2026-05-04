@@ -656,6 +656,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#hands-on-focus" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hands-on Focus
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#what-you-will-learn" class="md-nav__link">
     <span class="md-ellipsis">
       What You Will Learn
@@ -677,6 +686,15 @@
   <a href="#resources" class="md-nav__link">
     <span class="md-ellipsis">
       Resources
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-run-analysis-with-xaquaticriskanalysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Post-Run Analysis with xAquaticRiskAnalysis
     </span>
   </a>
   
@@ -727,6 +745,29 @@
   
   <span class="md-ellipsis">
     Control Panel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="xAquaticRiskAnalysis.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Analysis Tool (xARA)
     
   </span>
   
@@ -910,19 +951,25 @@
 
 
 <h1 id="aquatic-invertebrates-xaquaticrisk-training">Aquatic Invertebrates — xAquaticRisk Training</h1>
-<p>This section covers landscape-level aquatic risk assessment for <strong>invertebrate populations</strong> using the <a href="https://github.com/xlandscape/xAquaticRisk">xAquaticRisk</a> landscape model.</p>
-<div class="admonition note">
-<p class="admonition-title">Coming Soon</p>
-<p>Training materials for this section are being prepared and will be published here.</p>
-</div>
+<p><strong>Slide deck:</strong> <a href="../static/SETAC_xLandscapeTraining%20-%20%282a%29%20Training%20Hands-on%20v0.2.pdf">SETAC xLandscape Training — (2a) Training Hands-on</a></p>
+<p>This hands-on session introduces how <strong>xAquaticRisk</strong> is used for a more realistic, landscape-level assessment of risks to <strong>aquatic invertebrates</strong>. The training starts from a case where a <strong>lower-tier assessment indicates risk</strong> and then shows how a higher-tier, spatially explicit workflow can be used to refine the assessment.</p>
+<p>The practical focus is on a regulatory use case in which the <strong>key environmental concern is the high toxicity to aquatic invertebrates</strong>. Participants are guided through the logic of a higher-tier assessment: defining the problem formulation, specifying the protection goal, simulating exposure in surface waters, linking exposure to effects, and interpreting whether risk is acceptable under realistic landscape conditions.</p>
+<h2 id="hands-on-focus">Hands-on Focus</h2>
+<ul>
+<li>Why does the lower-tier assessment indicate risk?</li>
+<li>How can exposure in <strong>surface water</strong> be represented more realistically in space and time?</li>
+<li>How do <strong>spray drift</strong>, environmental fate, and hydrological connectivity influence aquatic exposure?</li>
+<li>How can <strong>effect modelling</strong> for aquatic invertebrates be linked to exposure predictions?</li>
+<li>How can <strong>recovery</strong> and <strong>risk reduction measures</strong> be considered in a higher-tier context?</li>
+</ul>
 <h2 id="what-you-will-learn">What You Will Learn</h2>
 <ul>
-<li>How to set up and configure the <strong>xAquaticRisk</strong> landscape model for invertebrates</li>
-<li>Understanding <strong>spray-drift deposition</strong> into surface waters</li>
-<li>Modelling <strong>environmental fate</strong> of pesticides in stream networks using TOXSWA / CMF</li>
-<li>Applying <strong>TKTD models</strong> (GUTS-SD, GUTS-IT) for individual-level effects</li>
-<li>Running <strong>population-level simulations</strong> with StreamCom (<em>Asellus aquaticus</em>, <em>Gammarus pulex</em>, <em>Cloeon dipterum</em>)</li>
-<li>Interpreting risk metrics (LP50) for regulatory decision-making</li>
+<li>How to structure a <strong>problem formulation</strong> for higher-tier aquatic risk assessment</li>
+<li>How to use <strong>xAquaticRisk</strong> to refine a lower-tier indicated risk</li>
+<li>How to simulate <strong>exposure in surface waters</strong> under realistic landscape conditions</li>
+<li>How to link exposure to <strong>effects on aquatic invertebrates</strong></li>
+<li>How to interpret outcomes in relation to <strong>Specific Protection Goals (SPGs)</strong> and regulatory acceptability</li>
+<li>How mitigation options such as <strong>drift-reducing measures</strong> can change the risk picture</li>
 </ul>
 <h2 id="key-model-components">Key Model Components</h2>
 <table>
@@ -953,9 +1000,20 @@
 </table>
 <h2 id="resources">Resources</h2>
 <ul>
+<li><a href="../static/SETAC_xLandscapeTraining%20-%20%282a%29%20Training%20Hands-on%20v0.2.pdf">Hands-on slide deck (PDF)</a></li>
 <li><a href="https://github.com/xlandscape/xAquaticRisk">xAquaticRisk GitHub Repository</a></li>
+<li><a href="https://github.com/xlandscape/xAquaticRiskAnalysis">xAquaticRiskAnalysis GitHub Repository</a> — standalone analysis and reporting web interface for completed simulation runs</li>
 <li><a href="https://github.com/xlandscape">xLandscape Framework</a></li>
 </ul>
+<h2 id="post-run-analysis-with-xaquaticriskanalysis">Post-Run Analysis with xAquaticRiskAnalysis</h2>
+<p><strong>xAquaticRiskAnalysis (xARA)</strong> is a standalone web application for exploring and analysing the outputs of completed xAquaticRisk simulation runs. It runs on a separate port (8091) alongside the xAquaticRisk control panel (8090) and requires no model installation — only access to the shared <code>run/</code> folder.</p>
+<p>xARA provides:</p>
+<ul>
+<li><strong>Analysis workflows</strong> — PEC metrics and GUTS risk indicators, downloadable as figures and Excel tables</li>
+<li><strong>Map explorer</strong> — interactive visualisation of reach geometries and spray-drift timeseries</li>
+<li><strong>Run browser</strong> — list all experiments and MC runs in the shared <code>run/</code> folder</li>
+</ul>
+<p><a href="xAquaticRiskAnalysis.html">xAquaticRiskAnalysis documentation &rarr;</a></p>
 
 
 
