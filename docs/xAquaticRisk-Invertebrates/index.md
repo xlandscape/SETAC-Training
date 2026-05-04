@@ -36,4 +36,17 @@ The practical focus is on a regulatory use case in which the **key environmental
 
 - [Hands-on slide deck (PDF)](../static/SETAC_xLandscapeTraining%20-%20%282a%29%20Training%20Hands-on%20v0.2.pdf)
 - [xAquaticRisk GitHub Repository](https://github.com/xlandscape/xAquaticRisk)
+- [xAquaticRiskAnalysis GitHub Repository](https://github.com/xlandscape/xAquaticRiskAnalysis) — standalone analysis and reporting web interface for completed simulation runs
 - [xLandscape Framework](https://github.com/xlandscape)
+
+## Post-Run Analysis with xAquaticRiskAnalysis
+
+**xAquaticRiskAnalysis (xARA)** is a standalone web application for exploring and analysing the outputs of completed xAquaticRisk simulation runs. It runs on a separate port (8091) alongside the xAquaticRisk control panel (8090) and requires no model installation — only access to the shared `run/` folder.
+
+xARA provides:
+
+- **Analysis workflows** — PEC metrics and GUTS risk indicators, downloadable as figures and Excel tables
+- **Map explorer** — interactive visualisation of reach geometries and spray-drift timeseries
+- **Run browser** — list all experiments and MC runs in the shared `run/` folder
+
+[xAquaticRiskAnalysis documentation &rarr;](xAquaticRiskAnalysis.md)
