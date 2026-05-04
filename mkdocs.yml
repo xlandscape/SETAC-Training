@@ -54,6 +54,7 @@ nav:
     - Overview: 'xAquaticRisk-Invertebrates/index.md'
     - Model Overview: 'xAquaticRisk-Invertebrates/xAquaticRisk-overview.md'
     - Control Panel: 'xAquaticRisk-Invertebrates/controlpanel.md'
+    - Analysis Tool (xARA): 'xAquaticRisk-Invertebrates/xAquaticRiskAnalysis.md'
   - Aquatic Plants:
     - Overview: 'xAquaticRisk-Plants/index.md'
   - Pollinators:

@@ -1,18 +1,27 @@
 # Aquatic Invertebrates — xAquaticRisk Training
 
-This section covers landscape-level aquatic risk assessment for **invertebrate populations** using the [xAquaticRisk](https://github.com/xlandscape/xAquaticRisk) landscape model.
+**Slide deck:** [SETAC xLandscape Training — (2a) Training Hands-on](../static/SETAC_xLandscapeTraining%20-%20%282a%29%20Training%20Hands-on%20v0.2.pdf)
 
-!!! note "Coming Soon"
-    Training materials for this section are being prepared and will be published here.
+This hands-on session introduces how **xAquaticRisk** is used for a more realistic, landscape-level assessment of risks to **aquatic invertebrates**. The training starts from a case where a **lower-tier assessment indicates risk** and then shows how a higher-tier, spatially explicit workflow can be used to refine the assessment.
+
+The practical focus is on a regulatory use case in which the **key environmental concern is the high toxicity to aquatic invertebrates**. Participants are guided through the logic of a higher-tier assessment: defining the problem formulation, specifying the protection goal, simulating exposure in surface waters, linking exposure to effects, and interpreting whether risk is acceptable under realistic landscape conditions.
+
+## Hands-on Focus
+
+- Why does the lower-tier assessment indicate risk?
+- How can exposure in **surface water** be represented more realistically in space and time?
+- How do **spray drift**, environmental fate, and hydrological connectivity influence aquatic exposure?
+- How can **effect modelling** for aquatic invertebrates be linked to exposure predictions?
+- How can **recovery** and **risk reduction measures** be considered in a higher-tier context?
 
 ## What You Will Learn
 
-- How to set up and configure the **xAquaticRisk** landscape model for invertebrates
-- Understanding **spray-drift deposition** into surface waters
-- Modelling **environmental fate** of pesticides in stream networks using TOXSWA / CMF
-- Applying **TKTD models** (GUTS-SD, GUTS-IT) for individual-level effects
-- Running **population-level simulations** with StreamCom (*Asellus aquaticus*, *Gammarus pulex*, *Cloeon dipterum*)
-- Interpreting risk metrics (LP50) for regulatory decision-making
+- How to structure a **problem formulation** for higher-tier aquatic risk assessment
+- How to use **xAquaticRisk** to refine a lower-tier indicated risk
+- How to simulate **exposure in surface waters** under realistic landscape conditions
+- How to link exposure to **effects on aquatic invertebrates**
+- How to interpret outcomes in relation to **Specific Protection Goals (SPGs)** and regulatory acceptability
+- How mitigation options such as **drift-reducing measures** can change the risk picture
 
 ## Key Model Components
 
@@ -25,5 +34,19 @@ This section covers landscape-level aquatic risk assessment for **invertebrate p
 
 ## Resources
 
+- [Hands-on slide deck (PDF)](../static/SETAC_xLandscapeTraining%20-%20%282a%29%20Training%20Hands-on%20v0.2.pdf)
 - [xAquaticRisk GitHub Repository](https://github.com/xlandscape/xAquaticRisk)
+- [xAquaticRiskAnalysis GitHub Repository](https://github.com/xlandscape/xAquaticRiskAnalysis) — standalone analysis and reporting web interface for completed simulation runs
 - [xLandscape Framework](https://github.com/xlandscape)
+
+## Post-Run Analysis with xAquaticRiskAnalysis
+
+**xAquaticRiskAnalysis (xARA)** is a standalone web application for exploring and analysing the outputs of completed xAquaticRisk simulation runs. It runs on a separate port (8091) alongside the xAquaticRisk control panel (8090) and requires no model installation — only access to the shared `run/` folder.
+
+xARA provides:
+
+- **Analysis workflows** — PEC metrics and GUTS risk indicators, downloadable as figures and Excel tables
+- **Map explorer** — interactive visualisation of reach geometries and spray-drift timeseries
+- **Run browser** — list all experiments and MC runs in the shared `run/` folder
+
+[xAquaticRiskAnalysis documentation &rarr;](xAquaticRiskAnalysis.md)
