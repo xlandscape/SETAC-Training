@@ -5,7 +5,7 @@
 
 ## Overview
 
-xaquatic-funne is based on [xAquaticRisk](https://github.com/xlandscape/xAquaticRisk) but includes:
+xaquatic-funne is based on [xAquaticRisk](original.md) but includes:
 - Modifications specific to workshop training scenarios
 - Pre-configured settings for aquatic plant assessments
 
@@ -62,3 +62,4 @@ This version is distributed via a secure download link shared with registered wo
 ## Resources
 
 - [License Terms](LICENSE-xaquatic-funne.md)
+- [Original xAquaticRisk](original.md) (open-source version)

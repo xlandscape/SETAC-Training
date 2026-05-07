@@ -21,9 +21,9 @@ Distributed via secure download link with strict license restrictions.
 
 ## About xAquaticRisk (Original Version)
 
-xaquatic-funne is based on **[xAquaticRisk](https://github.com/xlandscape/xAquaticRisk)**, the original open-source implementation available on GitHub. 
+xaquatic-funne is based on **[xAquaticRisk](original.md)**, the original open-source implementation available on GitHub. 
 
-If you need an open-source alternative that can be freely shared and distributed, visit the [xAquaticRisk GitHub Repository](https://github.com/xlandscape/xAquaticRisk).
+If you need an open-source alternative that can be freely shared and distributed, see the [original version documentation](original.md) or visit the [xAquaticRisk GitHub Repository](https://github.com/xlandscape/xAquaticRisk).
 
 ---
 
