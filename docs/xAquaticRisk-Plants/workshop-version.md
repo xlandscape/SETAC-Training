@@ -62,4 +62,3 @@ This version is distributed via a secure download link shared with registered wo
 ## Resources
 
 - [License Terms](LICENSE-xaquatic-funne.md)
-- [Original xAquaticRisk](original.md) (open-source version)
