@@ -1,26 +1,40 @@
-# Aquatic Plants — xAquaticRisk Training
+# Aquatic Plants — Risk Assessment Training
 
-This section covers landscape-level aquatic risk assessment for **aquatic macrophytes and algae** using [xAquaticRisk](https://github.com/xlandscape/xAquaticRisk) configured for aquatic plant communities.
+This section covers landscape-level aquatic risk assessment for **aquatic macrophytes** (aquatic plants) using the xaquatic-funne workshop version.
+
+## xaquatic-funne — Workshop Version
+
+**For SETAC Training Workshop participants only**
+
+xaquatic-funne is a modified version of [xAquaticRisk](https://github.com/xlandscape/xAquaticRisk) specifically developed for the workshop. It includes enhanced features and configurations tailored for workshop participants.
+
+Distributed via secure download link with strict license restrictions.
+
+- ⚠️ **Workshop participants only**
+- ⚠️ Cannot be shared or distributed
+- ⚠️ Cannot be uploaded to Git
+- ⚠️ Proprietary restrictive license
+
+[**View Full Documentation →**](workshop-version.md)
+
+---
+
+## About xAquaticRisk (Original Version)
+
+xaquatic-funne is based on **[xAquaticRisk](https://github.com/xlandscape/xAquaticRisk)**, the original open-source implementation available on GitHub. 
+
+If you need an open-source alternative that can be freely shared and distributed, visit the [xAquaticRisk GitHub Repository](https://github.com/xlandscape/xAquaticRisk).
+
+---
+
+## Overview
+
+The model provides comprehensive tools for:
+
+- Configuring aquatic plant risk assessment models
+- Modelling pesticide exposure in surface waters
+- Applying effect models for aquatic plant communities
+- Interpreting results in regulatory contexts (e.g., EFSA Aquatic Guidance)
 
 !!! note "Coming Soon"
-    Training materials for this section are being prepared and will be published here.
-
-## What You Will Learn
-
-- How to configure **xAquaticRisk** for aquatic plant risk assessment
-- Modelling **pesticide exposure** in surface waters relevant to macrophytes and algae
-- Applying **effect models** for aquatic plant communities
-- Interpreting results in a **regulatory context** (e.g., EFSA Aquatic Guidance)
-
-## Key Model Components
-
-| Component | Description |
-|-----------|-------------|
-| XSprayDrift | Spray-drift deposition into surface waters |
-| CascadeToxswa / StepsRiverNetwork | Environmental fate modelling |
-| Aquatic plant effect modules | Effect assessment for macrophytes / algae |
-
-## Resources
-
-- [xAquaticRisk GitHub Repository](https://github.com/xlandscape/xAquaticRisk)
-- [xLandscape Framework](https://github.com/xlandscape)
+    Training materials are being prepared and will be published here.
