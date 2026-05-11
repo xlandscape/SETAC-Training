@@ -1,0 +1,1755 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://xlandscape.github.io/SETAC-Training/xPollinator/complete-workflow.html">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Complete xPollinator Workflow Tutorial - xLandscape Training</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#complete-xpollinator-workflow-tutorial" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../index.html" title="xLandscape Training" class="md-header__button md-logo" aria-label="xLandscape Training" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 2h16c1.1 0 2 .9 2 2v6H10v10h4.55q.27.45.54.84c.29.43.57.82.83 1.16H4c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2m4 2H4v10h4zM4 16v4h4v-4zm6-8h10V4H10zm8.5 14s-.58-.65-1.27-1.59c-.09-.13-.19-.27-.29-.41C16 18.66 15 16.89 15 15.5c0-1.9 1.6-3.5 3.5-3.5.53 0 1.04.13 1.5.35 1.17.57 2 1.78 2 3.15 0 1.54-1.23 3.54-2.23 4.91-.69.94-1.27 1.59-1.27 1.59m-1.2-6.4c0 .6.5 1.2 1.2 1.2s1.3-.6 1.2-1.2c0-.6-.6-1.2-1.2-1.2s-1.2.5-1.2 1.2"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            xLandscape Training
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Complete xPollinator Workflow Tutorial
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="light-blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/xlandscape/SETAC-Training" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    SETAC-Training on GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../index.html" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../LandscapeModelling/index.html" class="md-tabs__link">
+          
+  
+  
+  Landscape Modelling
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../xLandscape/index.html" class="md-tabs__link">
+          
+  
+  
+  xLandscape
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../xAquaticRisk-Invertebrates/index.html" class="md-tabs__link">
+          
+  
+  
+  Aquatic Invertebrates
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../xAquaticRisk-Plants/index.html" class="md-tabs__link">
+          
+  
+  
+  Aquatic Plants
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="index.html" class="md-tabs__link">
+          
+  
+  
+  Pollinators
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="xLandscape Training" class="md-nav__button md-logo" aria-label="xLandscape Training" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 2h16c1.1 0 2 .9 2 2v6H10v10h4.55q.27.45.54.84c.29.43.57.82.83 1.16H4c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2m4 2H4v10h4zM4 16v4h4v-4zm6-8h10V4H10zm8.5 14s-.58-.65-1.27-1.59c-.09-.13-.19-.27-.29-.41C16 18.66 15 16.89 15 15.5c0-1.9 1.6-3.5 3.5-3.5.53 0 1.04.13 1.5.35 1.17.57 2 1.78 2 3.15 0 1.54-1.23 3.54-2.23 4.91-.69.94-1.27 1.59-1.27 1.59m-1.2-6.4c0 .6.5 1.2 1.2 1.2s1.3-.6 1.2-1.2c0-.6-.6-1.2-1.2-1.2s-1.2.5-1.2 1.2"/></svg>
+
+    </a>
+    xLandscape Training
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/xlandscape/SETAC-Training" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    SETAC-Training on GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Landscape Modelling
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Landscape Modelling
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LandscapeModelling/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    xLandscape
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    xLandscape
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xLandscape/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aquatic Invertebrates
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Aquatic Invertebrates
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xAquaticRisk-Invertebrates/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xAquaticRisk-Invertebrates/xAquaticRisk-overview.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Model Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xAquaticRisk-Invertebrates/controlpanel.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Control Panel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xAquaticRisk-Invertebrates/xAquaticRiskAnalysis.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Analysis Tool (xARA)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aquatic Plants
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Aquatic Plants
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xAquaticRisk-Plants/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pollinators
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Pollinators
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="complete-xpollinator-workflow-tutorial">Complete xPollinator Workflow Tutorial</h1>
+<p>This tutorial walks you through the entire xPollinator landscape simulation and visualization pipeline on Windows: from setting up the software, running a simple simulation, importing results into the visualization server, and exploring outputs in the interactive BeeView interface.</p>
+<p><strong>Estimated time</strong>: 2-3 hours for the complete workflow (including initial setup and downloads)</p>
+<hr />
+<h2 id="1-the-xlandscape-components-an-overview">1. The xLandscape Components: An Overview</h2>
+<p>The xPollinator risk assessment workflow integrates four key software components:</p>
+<h3 id="11-xlandscape-framework-core-engine">1.1 xLandscape Framework (Core Engine)</h3>
+<p>The <strong>xLandscape framework</strong> is a microkernel-based landscape modeling platform that provides:
+- <strong>Component-based architecture</strong>: Modular software components that transform spatial and temporal data
+- <strong>Semantic data handling</strong>: Automatic tracking of units, coordinate systems, and data scales
+- <strong>Multidimensional storage</strong>: HDF5-based data store for efficient access to large spatiotemporal arrays
+- <strong>Monte Carlo simulation</strong>: Support for propagating natural variability across replicate runs</p>
+<p><strong>In your workflow</strong>: Acts as the orchestration engine that chains xPollinator components together.</p>
+<h3 id="12-xpollinator-landscape-model">1.2 xPollinator Landscape Model</h3>
+<p><strong>xPollinator</strong> is a landscape-scale model that simulates:
+- <strong>Land use/land cover</strong> processing: Reads GIS shapefiles and categorizes vegetation types
+- <strong>Bee forage availability</strong>: Computes daily nectar and pollen availability from vegetation phenology
+- <strong>Pesticide exposure</strong>: Calculates how pesticide applications contaminate foraging resources
+- <strong>Population dynamics</strong>: Feeds forage and exposure data to the BEEHAVEecotox model</p>
+<p><strong>Data pipeline</strong>:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Landscape Scenario (shapefile + vegetation tables)
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    ↓
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Vegetation classification per land parcel
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    ↓
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Daily nectar/pollen timeseries (365 days)
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    ↓
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Pesticide applications → exposure in forage
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    ↓
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>Input preparation for bee colony model
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    ↓
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>HDF5 output store (arr.dat)
+</span></code></pre></div></p>
+<h3 id="13-beehaveecotox-bee-colony-model">1.3 BEEHAVEecotox (Bee Colony Model)</h3>
+<p><strong>BEEHAVEecotox</strong> is a NetLogo-based honeybee colony simulation that models:
+- <strong>Colony dynamics</strong>: Worker bees, brood, drones, food stores over time
+- <strong>Foraging behavior</strong>: Resource collection and consumption
+- <strong>Varroa parasites</strong>: Pest mortality and effects
+- <strong>Toxicological effects</strong>: How pesticide exposure reduces bee survival and reproduction</p>
+<p><strong>Key feature</strong>: Multiple replicates (typically 100) of the same scenario use different random seeds for population variability, allowing probabilistic assessment of colony survival.</p>
+<p><strong>Output</strong>: CSV file with daily colony metrics (workers, brood, foragers, food stores) for each replicate.</p>
+<h3 id="14-beeview-server-data-processing-backend">1.4 BeeView-server (Data Processing Backend)</h3>
+<p><strong>BeeView-server</strong> is a FastAPI web service that:
+- Loads xPollinator HDF5 outputs and BEEHAVEecotox CSV results
+- Stores data in a DuckDB spatial database with normalized tables
+- Serves REST API endpoints for spatial (GeoJSON features) and temporal (timeseries) queries
+- Calculates derived metrics (averages, percentiles, survival probabilities)</p>
+<p><strong>In your workflow</strong>: Bridge between simulation outputs and interactive visualization.</p>
+<h3 id="15-beeview-interactive-frontend">1.5 BeeView (Interactive Frontend)</h3>
+<p><strong>BeeView</strong> is a React + Vite web application providing:
+- <strong>Interactive map</strong>: Visualize nectar, pollen, vegetation, or pesticide exposure across the landscape
+- <strong>Time-series charts</strong>: Daily nectar/pollen availability and bee population metrics
+- <strong>Comparison view</strong>: Analyze survival differences between treated and untreated scenarios
+- <strong>Feature selection</strong>: Click map polygons to drill down into specific parcels</p>
+<p><strong>Desktop option</strong>: Packaged as an Electron app for offline use.</p>
+<hr />
+<h2 id="2-prerequisites">2. Prerequisites</h2>
+<p>Before starting, ensure you have the following on your Windows machine:</p>
+<h3 id="21-software-requirements">2.1 Software Requirements</h3>
+<table>
+<thead>
+<tr>
+<th>Software</th>
+<th>Version</th>
+<th>Purpose</th>
+<th>Download</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Git</strong></td>
+<td>≥2.30</td>
+<td>Version control &amp; cloning repos</td>
+<td>https://git-scm.com/download/win</td>
+</tr>
+<tr>
+<td><strong>Python</strong></td>
+<td>3.9.7+</td>
+<td>Required for xLandscape</td>
+<td>Bundled in xPollinator (see §3.1)</td>
+</tr>
+<tr>
+<td><strong>Node.js</strong></td>
+<td>≥18</td>
+<td>JavaScript runtime for BeeView</td>
+<td>https://nodejs.org/en/ (LTS recommended)</td>
+</tr>
+<tr>
+<td><strong>Python virtualenv</strong></td>
+<td>Built-in</td>
+<td>Virtual environment</td>
+<td><code>pip install virtualenv</code></td>
+</tr>
+<tr>
+<td><strong>Text editor/IDE</strong></td>
+<td>VS Code recommended</td>
+<td>For viewing configs &amp; logs</td>
+<td>https://code.visualstudio.com/</td>
+</tr>
+</tbody>
+</table>
+<h3 id="22-hardware-requirements">2.2 Hardware Requirements</h3>
+<ul>
+<li><strong>Disk space</strong>: ~5 GB (xPollinator framework + demo scenarios + node_modules)</li>
+<li><strong>RAM</strong>: 8 GB minimum; 16 GB recommended</li>
+<li><strong>Network</strong>: During setup to download dependencies and clone repositories</li>
+</ul>
+<h3 id="23-system-configuration">2.3 System Configuration</h3>
+<ul>
+<li><strong>Windows 10/11</strong> with command prompt or PowerShell</li>
+<li><strong>Firewall</strong>: May need to allow localhost traffic on ports 32000 (server) and 8081 (frontend)</li>
+<li><strong>SSL/Certificate issues</strong>: If behind corporate VPN, see <a href="../../reference/troubleshooting.md">Git network troubleshooting</a></li>
+</ul>
+<hr />
+<h2 id="3-setting-up-your-local-xlandscape-environment">3. Setting Up Your Local xLandscape Environment</h2>
+<h3 id="31-clone-the-xpollinator-repository">3.1 Clone the xPollinator Repository</h3>
+<p>Open PowerShell and navigate to where you want to install xPollinator:</p>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c"># Create a workspace folder</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">mkdir</span> <span class="n">C</span><span class="p">:\</span><span class="n">xLandscape</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nb">cd </span><span class="n">C</span><span class="p">:\</span><span class="n">xLandscape</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="c"># Clone xPollinator (includes bundled Python and xLandscape core)</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">://</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="p">/</span><span class="n">xlandscape</span><span class="p">/</span><span class="n">xPollinator</span><span class="p">.</span><span class="n">git</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="nb">cd </span><span class="n">xPollinator</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="c"># Clone BeeView-server (data processing backend)</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="nb">cd </span><span class="p">..</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">://</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="p">/</span><span class="n">xlandscape</span><span class="p">/</span><span class="n">BeeView-server</span><span class="p">.</span><span class="n">git</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="c"># Clone BeeView (frontend visualization)</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">://</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="p">/</span><span class="n">xlandscape</span><span class="p">/</span><span class="n">BeeView</span><span class="p">.</span><span class="n">git</span>
+</span></code></pre></div>
+<p><strong>Directory structure after cloning</strong>:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>C:\xLandscape\
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>├── xPollinator/
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>│   ├── model/core/          (xLandscape framework + bundled Python)
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>│   ├── model/variant/       (xPollinator-specific components)
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>│   ├── scenario/            (landscape scenarios)
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>│   └── run/                 (simulation outputs)
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>├── BeeView-server/
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>│   ├── model/               
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>│   ├── data/                (HDF5 and CSV files go here)
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>│   └── main.py              (FastAPI server)
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>└── BeeView/
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>    ├── src/
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>    └── package.json
+</span></code></pre></div></p>
+<h3 id="32-verify-xpollinator-installation">3.2 Verify xPollinator Installation</h3>
+<p>The bundled Python interpreter is located at <code>model/core/bin/python-3.9.7-amd64/python.exe</code>. Verify it works:</p>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">cd </span><span class="n">C</span><span class="p">:\</span><span class="n">xLandscape</span><span class="p">\</span><span class="n">xPollinator</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">model</span><span class="p">\</span><span class="n">core</span><span class="p">\</span><span class="n">bin</span><span class="p">\</span><span class="n">python</span><span class="p">-</span><span class="n">3</span><span class="p">.</span><span class="n">9</span><span class="p">.</span><span class="n">7-amd64</span><span class="p">\</span><span class="n">python</span><span class="p">.</span><span class="n">exe</span> <span class="p">-</span><span class="n">-version</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="c"># Output: Python 3.9.7</span>
+</span></code></pre></div>
+<h3 id="33-set-up-beeview-server">3.3 Set Up BeeView-server</h3>
+<p>Navigate to the BeeView-server directory and install Python dependencies:</p>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">cd </span><span class="n">C</span><span class="p">:\</span><span class="n">xLandscape</span><span class="p">\</span><span class="n">BeeView-server</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="c"># Create a virtual environment</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="n">python</span> <span class="n">-m</span> <span class="n">venv</span> <span class="n">venv</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="c"># Activate it</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="n">venv</span><span class="p">\</span><span class="n">Scripts</span><span class="p">\</span><span class="n">Activate</span><span class="p">.</span><span class="n">ps1</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="c"># If you encounter execution policy issues, run:</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="c"># Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="c"># Install dependencies</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="n">pip</span> <span class="n">install</span> <span class="p">-</span><span class="n">-upgrade</span> <span class="n">pip</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="n">pip</span> <span class="n">install</span> <span class="n">-r</span> <span class="n">requirements</span><span class="p">.</span><span class="n">txt</span>
+</span></code></pre></div>
+<p><strong>Expected output</strong>: Installation of FastAPI, DuckDB, h5py, numpy, geopandas, shapely, SQLAlchemy, and other dependencies (~100 MB).</p>
+<h3 id="34-set-up-beeview-frontend">3.4 Set Up BeeView Frontend</h3>
+<p>Install Node.js dependencies for the React + Vite application:</p>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">cd </span><span class="n">C</span><span class="p">:\</span><span class="n">xLandscape</span><span class="p">\</span><span class="n">BeeView</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="c"># Install npm packages</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="n">npm</span> <span class="n">install</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="c"># Verify Vite is installed</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="n">npm</span> <span class="n">list</span> <span class="n">vite</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="c"># Should show: vite@6.x.x</span>
+</span></code></pre></div>
+<hr />
+<h2 id="4-running-a-simple-xpollinator-simulation-single-hive-untreated">4. Running a Simple xPollinator Simulation (Single Hive, Untreated)</h2>
+<p>This section walks through a single-hive, untreated scenario using the Tarn-et-Garonne demo data.</p>
+<h3 id="41-understand-the-parameter-file-xrun">4.1 Understand the Parameter File (.xrun)</h3>
+<p>xPollinator is configured via XML parameter files (.xrun). A template is provided:</p>
+<p><strong>File</strong>: <code>C:\xLandscape\xPollinator\template.xrun</code></p>
+<p><strong>Key parameters</strong> (edit as needed):</p>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nt">&lt;Parameters&gt;</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="nt">&lt;SimID&gt;</span>my_first_run<span class="nt">&lt;/SimID&gt;</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">  </span><span class="nt">&lt;Project&gt;</span>scenario/Tarn-et-Garonne<span class="nt">&lt;/Project&gt;</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">  </span><span class="nt">&lt;NumberBeeHaveTimesteps&gt;</span>365<span class="nt">&lt;/NumberBeeHaveTimesteps&gt;</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">  </span><span class="nt">&lt;BeeHaveMapCenterPointX&gt;</span>127406.9408<span class="nt">&lt;/BeeHaveMapCenterPointX&gt;</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">  </span><span class="nt">&lt;BeeHaveMapCenterPointY&gt;</span>5482559.8501<span class="nt">&lt;/BeeHaveMapCenterPointY&gt;</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="nt">&lt;/Parameters&gt;</span>
+</span></code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Meaning</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SimID</code></td>
+<td>Unique name for this run (creates <code>run/&lt;SimID&gt;/</code>)</td>
+<td><code>my_first_run</code></td>
+</tr>
+<tr>
+<td><code>Project</code></td>
+<td>Path to landscape scenario (relative to <code>model/</code> folder)</td>
+<td><code>scenario/Tarn-et-Garonne</code></td>
+</tr>
+<tr>
+<td><code>NumberBeeHaveTimesteps</code></td>
+<td>Simulation duration in days (typically 365)</td>
+<td><code>365</code></td>
+</tr>
+<tr>
+<td><code>BeeHaveMapCenterPointX</code></td>
+<td>Hive X coordinate (UTM Zone 31N for France)</td>
+<td><code>127406.9408</code></td>
+</tr>
+<tr>
+<td><code>BeeHaveMapCenterPointY</code></td>
+<td>Hive Y coordinate (UTM Zone 31N for France)</td>
+<td><code>5482559.8501</code></td>
+</tr>
+</tbody>
+</table>
+<p>⚠️ <strong>Important</strong>: <code>SimID</code> must be unique. If you re-run with the same <code>SimID</code>, you will overwrite the previous results.</p>
+<h3 id="42-create-your-first-parameter-file">4.2 Create Your First Parameter File</h3>
+<p>Create a new file in the xPollinator root:</p>
+<p><strong>File</strong>: <code>C:\xLandscape\xPollinator\tutorial_single_untreated.xrun</code></p>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nt">&lt;Parameters&gt;</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="nt">&lt;SimID&gt;</span>tutorial_single_untreated<span class="nt">&lt;/SimID&gt;</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">  </span><span class="nt">&lt;Project&gt;</span>scenario/Tarn-et-Garonne<span class="nt">&lt;/Project&gt;</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">  </span><span class="nt">&lt;NumberBeeHaveTimesteps&gt;</span>365<span class="nt">&lt;/NumberBeeHaveTimesteps&gt;</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">  </span><span class="nt">&lt;BeeHaveMapCenterPointX&gt;</span>127406.9408<span class="nt">&lt;/BeeHaveMapCenterPointX&gt;</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">  </span><span class="nt">&lt;BeeHaveMapCenterPointY&gt;</span>5482559.8501<span class="nt">&lt;/BeeHaveMapCenterPointY&gt;</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="nt">&lt;/Parameters&gt;</span>
+</span></code></pre></div>
+<p><strong>Note</strong>: This scenario is <strong>untreated</strong> because the xPollinator component pipeline is configured to skip pesticide applications (see <code>model/variant/experiment.xml</code>).</p>
+<h3 id="43-run-the-simulation">4.3 Run the Simulation</h3>
+<p>Navigate to the xPollinator root and run the simulation:</p>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nb">cd </span><span class="n">C</span><span class="p">:\</span><span class="n">xLandscape</span><span class="p">\</span><span class="n">xPollinator</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="c"># Method 1: Drag &amp; drop</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="c"># Drag tutorial_single_untreated.xrun onto __start__.bat in Windows Explorer</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="c"># Method 2: Command line (PowerShell)</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="p">.\</span><span class="n">__start__</span><span class="p">.</span><span class="n">bat</span> <span class="n">tutorial_single_untreated</span><span class="p">.</span><span class="n">xrun</span>
+</span></code></pre></div>
+<p><strong>Expected runtime</strong>: ~10-15 minutes</p>
+<p><strong>Console output</strong> (watch for progress):
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>[INFO] Loading LandscapeScenario...
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>[INFO] Loading vegetation classes...
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>[INFO] Computing BeeForage (nectar/pollen timeseries)...
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>[INFO] Preparing BeeHaveEcotox inputs...
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>[INFO] Running BEEHAVEecotox (100 replicates)...
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>[INFO] Simulation complete!
+</span></code></pre></div></p>
+<h3 id="44-verify-output">4.4 Verify Output</h3>
+<p>After the simulation completes, check the output directory:</p>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c"># Navigate to outputs</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="nb">cd </span><span class="n">C</span><span class="p">:\</span><span class="n">xLandscape</span><span class="p">\</span><span class="n">xPollinator</span><span class="p">\</span><span class="n">run</span><span class="p">\</span><span class="n">tutorial_single_untreated</span><span class="p">\</span><span class="n">mcs</span><span class="p">\</span><span class="n">0</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="c"># List files</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="nb">ls</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="c"># Expected structure:</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="c"># store/</span>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="c">#   └── arr.dat          (HDF5 multidimensional data store)</span>
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="c"># processing/</span>
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="c">#   └── BeeHave/</span>
+</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="c">#       ├── output.csv   (100 replicates x 365 days of colony metrics)</span>
+</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="c">#       └── segments.shp (radial grid geometry)</span>
+</span></code></pre></div>
+<p><strong>Key output files</strong>:
+- <code>arr.dat</code> — HDF5 store with nectar, pollen, vegetation, feature IDs (~50 MB)
+- <code>output.csv</code> — BEEHAVE results with colony metrics (workers, brood, foragers)</p>
+<hr />
+<h2 id="5-setting-up-beeview-server-and-importing-the-run">5. Setting Up BeeView-server and Importing the Run</h2>
+<h3 id="51-copy-output-files-to-beeview-server-data-directory">5.1 Copy Output Files to BeeView-server Data Directory</h3>
+<p>Copy the simulation outputs to where BeeView-server expects them:</p>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c"># Copy HDF5 store</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="nb">Copy-Item</span> <span class="s2">&quot;C:\xLandscape\xPollinator\run\tutorial_single_untreated\mcs\0\store\arr.dat&quot;</span> <span class="p">`</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>          <span class="s2">&quot;C:\xLandscape\BeeView-server\data\arr.dat&quot;</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="c"># Copy BEEHAVE population metrics</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="nb">Copy-Item</span> <span class="s2">&quot;C:\xLandscape\xPollinator\run\tutorial_single_untreated\mcs\0\processing\BeeHave\output.csv&quot;</span> <span class="p">`</span>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>          <span class="s2">&quot;C:\xLandscape\BeeView-server\data\output.csv&quot;</span>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="c"># Copy land use/land cover shapefile (already in scenario, but ensure it&#39;s in data/)</span>
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="nb">Copy-Item</span> <span class="s2">&quot;C:\xLandscape\xPollinator\scenario\Tarn-et-Garonne\geo\lulc.*&quot;</span> <span class="p">`</span>
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>          <span class="s2">&quot;C:\xLandscape\BeeView-server\data\&quot;</span>
+</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>
+</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="c"># Verify files are present</span>
+</span><span id="__span-11-14"><a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="nb">ls </span><span class="n">C</span><span class="p">:\</span><span class="n">xLandscape</span><span class="p">\</span><span class="n">BeeView-server</span><span class="p">\</span><span class="n">data</span><span class="p">\</span>
+</span></code></pre></div>
+<p><strong>Expected directory contents</strong>:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>data/
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>├── arr.dat                                  (HDF5 store ~50 MB)
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>├── beeview.duckdb                          (Database, may be recreated)
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>├── lulc.shp, lulc.dbf, lulc.prj, lulc.shx (Shapefile components)
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>├── output.csv                              (BEEHAVE results)
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>├── vegetation classes.json                 (Vegetation definitions)
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>├── land cover to vegetation default mapping.csv
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>└── applications.txt                        (Optional: pesticide applications)
+</span></code></pre></div></p>
+<h3 id="52-start-beeview-server">5.2 Start BeeView-server</h3>
+<p>In a <strong>new PowerShell window</strong> (keep xPollinator window open if still running), navigate to BeeView-server and start the server:</p>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nb">cd </span><span class="n">C</span><span class="p">:\</span><span class="n">xLandscape</span><span class="p">\</span><span class="n">BeeView-server</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="c"># Activate virtual environment</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="n">venv</span><span class="p">\</span><span class="n">Scripts</span><span class="p">\</span><span class="n">Activate</span><span class="p">.</span><span class="n">ps1</span>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="c"># Start the server</span>
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="n">python</span> <span class="n">main</span><span class="p">.</span><span class="n">py</span>
+</span></code></pre></div>
+<p><strong>Expected output</strong>:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>[INFO] Loading LandscapeScenario data...
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>[INFO] Loading vegetation classes...
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>[INFO] Loading vegetation timeseries...
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>[INFO] Loading nectar timeseries...
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>[INFO] Loading pollen timeseries...
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>[INFO] Loading bee population metrics...
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>[INFO] Server ready at http://0.0.0.0:32000
+</span></code></pre></div></p>
+<p>⚠️ <strong>Database initialization</strong>: On first run, the server creates <code>data/beeview.duckdb</code> and loads all data. This may take 2-5 minutes. You should see progress messages.</p>
+<h3 id="53-verify-server-is-running">5.3 Verify Server is Running</h3>
+<p>Open a browser and test the API:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>http://localhost:32000/docs
+</span></code></pre></div>
+<p>You should see an interactive <strong>Swagger UI</strong> listing all available endpoints. This confirms the server is running correctly.</p>
+<p><strong>Key endpoints</strong> (visible in Swagger):
+- <code>/geojson</code> — Returns all land cover features as GeoJSON
+- <code>/geojson/viewport</code> — Returns features within map bounds
+- <code>/api/nectar/max</code> — Maximum nectar values per feature
+- <code>/api/pollen/max</code> — Maximum pollen values per feature
+- <code>/api/timeseries/averages</code> — Daily nectar/pollen averages
+- <code>/api/bee-population/timeseries</code> — Bee colony metrics over time</p>
+<hr />
+<h2 id="6-running-the-beeview-frontend">6. Running the BeeView Frontend</h2>
+<h3 id="61-start-the-frontend-development-server">6.1 Start the Frontend Development Server</h3>
+<p>In a <strong>third PowerShell window</strong>, navigate to the BeeView directory and start the frontend:</p>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="nb">cd </span><span class="n">C</span><span class="p">:\</span><span class="n">xLandscape</span><span class="p">\</span><span class="n">BeeView</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="c"># Start Vite development server (will auto-open http://localhost:8081)</span>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="n">npm</span> <span class="n">run</span> <span class="n">dev</span>
+</span></code></pre></div>
+<p><strong>Expected output</strong>:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>VITE v6.4.0  ready in XXX ms
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>➜  Local:   http://localhost:8081/
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>➜  press h to show help
+</span></code></pre></div></p>
+<p>The browser will open automatically to <code>http://localhost:8081/</code>. If not, open it manually.</p>
+<h3 id="62-verify-connection-to-server">6.2 Verify Connection to Server</h3>
+<p>Once BeeView loads, you should see:
+1. An <strong>interactive map</strong> showing the Tarn-et-Garonne landscape with land parcels
+2. A <strong>left sidebar</strong> with layer controls, time slider, and statistics
+3. <strong>No red error messages</strong> (if red messages appear, see <a href="#troubleshooting">Troubleshooting</a>)</p>
+<h3 id="63-interface-overview">6.3 Interface Overview</h3>
+<h4 id="map-view">Map View</h4>
+<p><strong>[PLACEHOLDER: Add screenshot of main map interface with labeled components]</strong></p>
+<p>The central map displays land cover classes using color-coded polygons:</p>
+<ul>
+<li><strong>Layer Controls</strong> (top left): Toggle between visualizations:</li>
+<li><strong>Land Use (LULC)</strong>: Shows land cover classification (arable, grassland, forest, water, etc.)</li>
+<li><strong>Nectar</strong>: Daily nectar availability [mg/m²/day], color intensity = amount</li>
+<li><strong>Pollen</strong>: Daily pollen availability [g/m²/day]</li>
+<li><strong>Vegetation</strong>: Vegetation classes per parcel</li>
+<li>
+<p><strong>Beehive</strong>: Center point of the simulated hive</p>
+</li>
+<li>
+<p><strong>Time Slider</strong> (bottom left): Scrub through the 365-day simulation</p>
+</li>
+<li>Day 1 = January 1</li>
+<li>Day 365 = December 31</li>
+</ul>
+<h4 id="left-sidebar">Left Sidebar</h4>
+<p><strong>[PLACEHOLDER: Add screenshot of sidebar with annotations]</strong></p>
+<p>The left panel provides data summaries and controls:</p>
+<ul>
+<li><strong>Run Selector</strong>: Choose which simulation run to view (if multiple runs imported)</li>
+<li><strong>Layer Controls</strong>: Toggle map layers on/off</li>
+<li><strong>Statistics Panel</strong>: Shows aggregated statistics for selected layer/time</li>
+<li><strong>Feature List</strong> (if features selected on map): Drill-down data for clicked parcels</li>
+</ul>
+<h4 id="time-series-chart">Time Series Chart</h4>
+<p><strong>[PLACEHOLDER: Add screenshot of time series chart]</strong></p>
+<p>Below the map, the <strong>Time Series Chart</strong> displays:</p>
+<ul>
+<li><strong>X-axis</strong>: Day of year (1-365)</li>
+<li><strong>Y-axis</strong>: Nectar or pollen availability [units/m²/day]</li>
+<li><strong>Line color</strong>: Green for selected features, gray for unselected</li>
+<li><strong>Interaction</strong>: Click points to see exact values; hover for tooltips</li>
+</ul>
+<h4 id="bee-population-chart">Bee Population Chart</h4>
+<p><strong>[PLACEHOLDER: Add screenshot of bee population chart]</strong></p>
+<p>A secondary chart shows <strong>colony metrics over time</strong>:</p>
+<ul>
+<li><strong>Worker bees</strong>: Daily active foragers</li>
+<li><strong>Brood</strong>: Developing bee cohorts</li>
+<li><strong>Food stores</strong>: Nectar and honey reserves</li>
+<li><strong>Varroa load</strong>: Parasite population (if applicable)</li>
+</ul>
+<h3 id="64-interacting-with-the-map">6.4 Interacting with the Map</h3>
+<p>Try these interactions to explore the data:</p>
+<ol>
+<li><strong>Select a parcel</strong>: Click any polygon on the map</li>
+<li>The parcel should highlight (outline)</li>
+<li>The Time Series Chart updates to show data for that parcel</li>
+<li>
+<p>Sidebar statistics update</p>
+</li>
+<li>
+<p><strong>Select multiple parcels</strong>: Hold Ctrl and click additional parcels</p>
+</li>
+<li>
+<p>The Time Series Chart will show averages across selected parcels</p>
+</li>
+<li>
+<p><strong>Change the layer</strong>: Use Layer Controls to switch from Nectar to Pollen</p>
+</li>
+<li>Map colors update to show pollen availability instead</li>
+<li>
+<p>Time Series Chart switches to pollen values</p>
+</li>
+<li>
+<p><strong>Advance time</strong>: Drag the Time Slider or use keyboard arrows</p>
+</li>
+<li>Map colors reflect nectar/pollen for that specific day</li>
+<li>
+<p>All charts update to show current time point</p>
+</li>
+<li>
+<p><strong>Pan and zoom</strong>: Use mouse wheel to zoom; drag to pan</p>
+</li>
+<li>Time Series Chart remains synchronized</li>
+<li>Viewport information is sent to the server for optimization</li>
+</ol>
+<h3 id="65-understanding-untreated-scenario-results">6.5 Understanding Untreated Scenario Results</h3>
+<p>For your untreated simulation, you should observe:</p>
+<ul>
+<li><strong>Nectar/Pollen</strong>: Strong seasonal patterns with peaks in spring/summer</li>
+<li><strong>Bee Population</strong>: Colony grows in spring as resources increase, shrinks in fall</li>
+<li><strong>No pesticide exposure</strong>: Pesticide widgets and exposures not visible (scenario is untreated)</li>
+</ul>
+<p><strong>Sample observations</strong>:
+- Day 60-150 (March-May): High nectar/pollen availability, growing bee population
+- Day 1-59, 289-365 (Winter): Low forage, stable/declining colony size</p>
+<hr />
+<h2 id="7-exploring-more-complex-setups-multi-hive-and-treated-scenarios">7. Exploring More Complex Setups: Multi-Hive and Treated Scenarios</h2>
+<h3 id="71-understanding-the-manifest-configuration">7.1 Understanding the Manifest Configuration</h3>
+<p>For more sophisticated analyses, xPollinator supports <strong>batch runs</strong> using a <strong>manifest</strong> configuration file. The manifest defines:</p>
+<ul>
+<li>Multiple hive locations and treatment scenarios</li>
+<li>Number of replicates per scenario</li>
+<li>Pesticide application schedules</li>
+</ul>
+<p><strong>Example manifest</strong>: <code>xPollinator/scripts/Scenario-TarnEtGaronne_manifest.json</code></p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="p">{</span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w">  </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Tarn-et-Garonne: 5 hive locations, treated vs untreated&quot;</span><span class="p">,</span>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="w">  </span><span class="nt">&quot;scenario&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;scenario/Tarn-et-Garonne&quot;</span><span class="p">,</span>
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="w">  </span><span class="nt">&quot;replicates&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span>
+</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="w">  </span><span class="nt">&quot;weather&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Weather File&quot;</span><span class="p">,</span>
+</span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="w">  </span><span class="nt">&quot;hives&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-18-7"><a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-18-8"><a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a><span class="w">      </span><span class="nt">&quot;group_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3614</span><span class="p">,</span>
+</span><span id="__span-18-9"><a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a><span class="w">      </span><span class="nt">&quot;location&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Hive A&quot;</span><span class="p">,</span>
+</span><span id="__span-18-10"><a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a><span class="w">      </span><span class="nt">&quot;seed&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1001</span><span class="p">,</span>
+</span><span id="__span-18-11"><a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a><span class="w">      </span><span class="nt">&quot;coordinates&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mf">127406.9408</span><span class="p">,</span><span class="w"> </span><span class="mf">5482559.8501</span><span class="p">]</span>
+</span><span id="__span-18-12"><a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-18-13"><a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-18-14"><a id="__codelineno-18-14" name="__codelineno-18-14" href="#__codelineno-18-14"></a><span class="w">      </span><span class="nt">&quot;group_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2114</span><span class="p">,</span>
+</span><span id="__span-18-15"><a id="__codelineno-18-15" name="__codelineno-18-15" href="#__codelineno-18-15"></a><span class="w">      </span><span class="nt">&quot;location&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Hive B&quot;</span><span class="p">,</span>
+</span><span id="__span-18-16"><a id="__codelineno-18-16" name="__codelineno-18-16" href="#__codelineno-18-16"></a><span class="w">      </span><span class="nt">&quot;seed&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1002</span><span class="p">,</span>
+</span><span id="__span-18-17"><a id="__codelineno-18-17" name="__codelineno-18-17" href="#__codelineno-18-17"></a><span class="w">      </span><span class="nt">&quot;coordinates&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mf">125000.0000</span><span class="p">,</span><span class="w"> </span><span class="mf">5480000.0000</span><span class="p">]</span>
+</span><span id="__span-18-18"><a id="__codelineno-18-18" name="__codelineno-18-18" href="#__codelineno-18-18"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-18-19"><a id="__codelineno-18-19" name="__codelineno-18-19" href="#__codelineno-18-19"></a><span class="w">  </span><span class="p">],</span>
+</span><span id="__span-18-20"><a id="__codelineno-18-20" name="__codelineno-18-20" href="#__codelineno-18-20"></a><span class="w">  </span><span class="nt">&quot;treatments&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-18-21"><a id="__codelineno-18-21" name="__codelineno-18-21" href="#__codelineno-18-21"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-18-22"><a id="__codelineno-18-22" name="__codelineno-18-22" href="#__codelineno-18-22"></a><span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;untreated&quot;</span><span class="p">,</span>
+</span><span id="__span-18-23"><a id="__codelineno-18-23" name="__codelineno-18-23" href="#__codelineno-18-23"></a><span class="w">      </span><span class="nt">&quot;min_applications&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+</span><span id="__span-18-24"><a id="__codelineno-18-24" name="__codelineno-18-24" href="#__codelineno-18-24"></a><span class="w">      </span><span class="nt">&quot;max_applications&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span>
+</span><span id="__span-18-25"><a id="__codelineno-18-25" name="__codelineno-18-25" href="#__codelineno-18-25"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-18-26"><a id="__codelineno-18-26" name="__codelineno-18-26" href="#__codelineno-18-26"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-18-27"><a id="__codelineno-18-27" name="__codelineno-18-27" href="#__codelineno-18-27"></a><span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;treated&quot;</span><span class="p">,</span>
+</span><span id="__span-18-28"><a id="__codelineno-18-28" name="__codelineno-18-28" href="#__codelineno-18-28"></a><span class="w">      </span><span class="nt">&quot;min_applications&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+</span><span id="__span-18-29"><a id="__codelineno-18-29" name="__codelineno-18-29" href="#__codelineno-18-29"></a><span class="w">      </span><span class="nt">&quot;max_applications&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span>
+</span><span id="__span-18-30"><a id="__codelineno-18-30" name="__codelineno-18-30" href="#__codelineno-18-30"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-18-31"><a id="__codelineno-18-31" name="__codelineno-18-31" href="#__codelineno-18-31"></a><span class="w">  </span><span class="p">]</span>
+</span><span id="__span-18-32"><a id="__codelineno-18-32" name="__codelineno-18-32" href="#__codelineno-18-32"></a><span class="p">}</span>
+</span></code></pre></div>
+<p><strong>Key concepts</strong>:</p>
+<ul>
+<li><strong>Replicates</strong>: Typically 100. Each replicate runs BEEHAVEecotox with a different random seed (same applications, different population dynamics)</li>
+<li><strong>Hives</strong>: List of hive locations with group IDs and center coordinates</li>
+<li><strong>Treatments</strong>: Defines pesticide application scenarios (untreated = 0 apps, treated = 1-5 apps)</li>
+</ul>
+<h3 id="72-running-a-multi-hive-batch">7.2 Running a Multi-Hive Batch</h3>
+<p>Create a new parameter file for a manifest-based batch run:</p>
+<p><strong>File</strong>: <code>C:\xLandscape\xPollinator\tutorial_multi_hives.xrun</code></p>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="nt">&lt;Parameters&gt;</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">  </span><span class="nt">&lt;SimID&gt;</span>tutorial_multi_hives<span class="nt">&lt;/SimID&gt;</span>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="w">  </span><span class="nt">&lt;Project&gt;</span>scenario/Tarn-et-Garonne<span class="nt">&lt;/Project&gt;</span>
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="w">  </span><span class="nt">&lt;Manifest&gt;</span>scripts/Scenario-TarnEtGaronne_manifest.json<span class="nt">&lt;/Manifest&gt;</span>
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="w">  </span><span class="nt">&lt;NumberBeeHaveTimesteps&gt;</span>365<span class="nt">&lt;/NumberBeeHaveTimesteps&gt;</span>
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="nt">&lt;/Parameters&gt;</span>
+</span></code></pre></div>
+<p>Run the manifest:</p>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="nb">cd </span><span class="n">C</span><span class="p">:\</span><span class="n">xLandscape</span><span class="p">\</span><span class="n">xPollinator</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="p">.\</span><span class="n">__start__</span><span class="p">.</span><span class="n">bat</span> <span class="n">tutorial_multi_hives</span><span class="p">.</span><span class="n">xrun</span>
+</span></code></pre></div>
+<p><strong>What happens</strong>:
+1. xPollinator processes each combination of hive + treatment
+2. For each combination, 100 BEEHAVE replicates are executed
+3. Output is stored separately for each hive and treatment (e.g., <code>run/tutorial_multi_hives/&lt;hive_id&gt;/&lt;treatment&gt;/</code>)</p>
+<p><strong>Expected duration</strong>: 30-60 minutes (depending on hardware and number of hives/treatments)</p>
+<h3 id="73-importing-multi-run-data-into-beeview-server">7.3 Importing Multi-Run Data into BeeView-server</h3>
+<p>For multi-run analyses, use the <code>import_run.py</code> script to batch-import multiple xPollinator outputs:</p>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="nb">cd </span><span class="n">C</span><span class="p">:\</span><span class="n">xLandscape</span><span class="p">\</span><span class="n">BeeView-server</span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="c"># Activate environment</span>
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="n">venv</span><span class="p">\</span><span class="n">Scripts</span><span class="p">\</span><span class="n">Activate</span><span class="p">.</span><span class="n">ps1</span>
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>
+</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a><span class="c"># Import a single run</span>
+</span><span id="__span-21-7"><a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a><span class="n">python</span> <span class="n">import_run</span><span class="p">.</span><span class="n">py</span> <span class="p">-</span><span class="n">-sim-id</span> <span class="n">tutorial_multi_hives</span> <span class="p">-</span><span class="n">-run-path</span> <span class="p">../</span><span class="n">xPollinator</span><span class="p">/</span><span class="n">run</span><span class="p">/</span><span class="n">tutorial_multi_hives</span>
+</span><span id="__span-21-8"><a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a>
+</span><span id="__span-21-9"><a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a><span class="c"># Or import interactively (script will prompt for paths)</span>
+</span><span id="__span-21-10"><a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a><span class="n">python</span> <span class="n">import_run</span><span class="p">.</span><span class="n">py</span>
+</span></code></pre></div>
+<p><strong>Database structure</strong> after import:</p>
+<p>The DuckDB database now contains multiple "runs" with separate nectar/pollen/population tables:
+- <code>runs</code> table: Stores run metadata (name, scenario, hive location, etc.)
+- Timeseries tables reference the <code>run_id</code> for cross-run comparison</p>
+<h3 id="74-using-beeviews-compare-runs-feature">7.4 Using BeeView's Compare Runs Feature</h3>
+<p>Once multiple runs are imported, BeeView can compare them:</p>
+<ol>
+<li>
+<p><strong>Open BeeView</strong> (refresh if already open): <code>http://localhost:8081/</code></p>
+</li>
+<li>
+<p><strong>Run Selector</strong> (top left sidebar):</p>
+</li>
+<li>You should see multiple runs listed</li>
+<li>
+<p>Select multiple runs (Ctrl+click)</p>
+</li>
+<li>
+<p><strong>View Modes</strong> (top right):</p>
+</li>
+<li>
+<p>Switch from "Single Run" to "Compare Runs"</p>
+</li>
+<li>
+<p><strong>Comparison Matrix</strong> displays:</p>
+</li>
+</ol>
+<p><strong>[PLACEHOLDER: Add screenshot of compare runs matrix]</strong></p>
+<ul>
+<li><strong>Rows</strong>: Baseline runs (e.g., untreated)</li>
+<li><strong>Columns</strong>: Scenario runs (e.g., treated)</li>
+<li><strong>Cell values</strong>: Survival probability (% of replicates reaching end-of-season threshold)</li>
+<li>
+<p><strong>Color coding</strong>: Red = survival decreased, Green = survival improved</p>
+</li>
+<li>
+<p><strong>Survival Probability Calculation</strong>:</p>
+</li>
+</ul>
+<p>For each hive and treatment pair, BeeView calculates:
+   <div class="language-text highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>Survival Probability = (# replicates with final workers ≥ 4000) / (total replicates)
+</span></code></pre></div></p>
+<p>Example:
+   - If 85 out of 100 untreated replicates have ≥4000 workers on day 365 → 85% survival
+   - If 65 out of 100 treated replicates reach the same threshold → 65% survival
+   - <strong>Effect</strong> = Treated - Untreated = -20% (20% reduction in survival probability)</p>
+<h3 id="75-interpreting-results">7.5 Interpreting Results</h3>
+<p>For the Tarn-et-Garonne multi-hive scenario:</p>
+<p><strong>Expected patterns</strong>:</p>
+<ul>
+<li><strong>Untreated hives</strong>: Survival typically 70-90% depending on landscape forage quality</li>
+<li><strong>Treated hives</strong>: Survival reduced by 5-30% depending on application frequency and timing</li>
+<li><strong>Hive location variation</strong>: Hives in richer forage landscapes (more crop diversity) show better survival</li>
+<li><strong>Replicates variation</strong>: Visible as error bars on survival probabilities (result of ±100 different BEEHAVE random seeds)</li>
+</ul>
+<p><strong>Ecosystem risk perspective</strong> (EFSA guidance):</p>
+<ul>
+<li>EFSA considers a 10% reduction in colony survival as biologically significant</li>
+<li>Multiple hives analyzed → Can estimate <strong>landscape-level risk</strong></li>
+<li>Compare across treatment scenarios to evaluate pesticide impacts</li>
+</ul>
+<hr />
+<h2 id="8-troubleshooting">8. Troubleshooting</h2>
+<h3 id="server-connection-issues">Server Connection Issues</h3>
+<p><strong>Problem</strong>: BeeView shows red error "Cannot connect to server"</p>
+<p><strong>Solution</strong>:
+1. Verify BeeView-server is running: Open <code>http://localhost:32000/docs</code> in browser
+2. Check port is not blocked: Some firewalls block port 32000
+3. Check data was loaded: Server console should show progress messages (may take 5 minutes on first run)</p>
+<h3 id="missing-data-files">Missing Data Files</h3>
+<p><strong>Problem</strong>: Server starts but no map shows; console shows "No features found"</p>
+<p><strong>Solution</strong>:
+1. Verify files are in <code>BeeView-server/data/</code>:
+   <div class="language-powershell highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="nb">ls </span><span class="n">C</span><span class="p">:\</span><span class="n">xLandscape</span><span class="p">\</span><span class="n">BeeView-server</span><span class="p">\</span><span class="n">data</span><span class="p">\</span>
+</span></code></pre></div>
+2. Check file permissions (should be readable by your user)
+3. Ensure <code>arr.dat</code> is not corrupted: HDF5 file should be &gt;40 MB for Tarn-et-Garonne
+4. Delete <code>data/beeview.duckdb</code> and restart server to force re-import</p>
+<h3 id="slow-performance">Slow Performance</h3>
+<p><strong>Problem</strong>: Map is sluggish; charts lag behind time slider</p>
+<p><strong>Solution</strong>:
+- This is expected on first-time viewport loads; subsequent pans/zooms are faster (cached)
+- Reduce number of selected features (click fewer parcels)
+- Close other applications to free RAM
+- For large datasets, consider using production build: <code>npm run build</code>, then serve via <code>npm run preview</code></p>
+<h3 id="xpollinator-simulation-fails">xPollinator Simulation Fails</h3>
+<p><strong>Problem</strong>: <code>__start__.bat</code> closes or shows error</p>
+<p><strong>Solution</strong>:
+1. Check .xrun file has valid XML (no typos in tags)
+2. Verify coordinates are in correct CRS (UTM for Tarn-et-Garonne, EPSG:32631)
+3. Ensure scenario path exists: <code>C:\xLandscape\xPollinator\scenario\Tarn-et-Garonne\</code>
+4. Check disk space (needs ~500 MB per run)
+5. Re-run with unique <code>&lt;SimID&gt;</code> (don't overwrite previous runs)</p>
+<hr />
+<h2 id="9-next-steps">9. Next Steps</h2>
+<h3 id="for-risk-assessment-work">For Risk Assessment Work</h3>
+<ol>
+<li><strong>Adapt scenarios</strong>: Modify landscape data or pesticide schedules for your region of interest</li>
+<li><strong>Regulatory compliance</strong>: Document inputs/outputs per <a href="https://efsa.onlinelibrary.wiley.com/doi/10.2903/j.efsa.2018.5224">EFSA Bee Guidance</a></li>
+<li><strong>Sensitivity analysis</strong>: Run multiple scenarios (e.g., different application timings) and compare survival curves</li>
+<li><strong>Population-level risk</strong>: Use multi-hive results to estimate landscape-scale impact</li>
+</ol>
+<h3 id="for-advanced-customization">For Advanced Customization</h3>
+<ol>
+<li><strong>BeeHave parameters</strong>: Modify colony initial conditions, food consumption rates in <code>model/variant/BeeHaveEcotox/BEEHAVEecotox.txt</code></li>
+<li><strong>Vegetation phenology</strong>: Update nectar/pollen availability tables in the scenario folder</li>
+<li><strong>Exposure routes</strong>: Extend pesticide modules to include soil contact or water exposure</li>
+<li><strong>Custom visualizations</strong>: Extend BeeView with new D3.js charts or map layers</li>
+</ol>
+<h3 id="resources">Resources</h3>
+<ul>
+<li><strong>xPollinator Documentation</strong>: https://github.com/xlandscape/xPollinator/blob/main/docs/index.md</li>
+<li><strong>xLandscape Framework</strong>: https://github.com/xlandscape/xLandscape</li>
+<li><strong>BeeView GitHub</strong>: https://github.com/xlandscape/BeeView</li>
+<li><strong>EFSA Guidance Document</strong>: https://efsa.onlinelibrary.wiley.com/doi/10.2903/j.efsa.2018.5224</li>
+</ul>
+<hr />
+<h2 id="appendix-parameter-reference">Appendix: Parameter Reference</h2>
+<h3 id="xrun-file-parameters">.xrun File Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SimID</code></td>
+<td>string</td>
+<td>Yes</td>
+<td>Unique simulation identifier (alphanumeric, no spaces)</td>
+</tr>
+<tr>
+<td><code>Project</code></td>
+<td>string</td>
+<td>Yes</td>
+<td>Path to scenario folder (relative to <code>model/</code>)</td>
+</tr>
+<tr>
+<td><code>Manifest</code></td>
+<td>string</td>
+<td>No</td>
+<td>Path to manifest JSON for batch runs</td>
+</tr>
+<tr>
+<td><code>NumberBeeHaveTimesteps</code></td>
+<td>integer</td>
+<td>Yes</td>
+<td>Simulation duration in days (typically 365)</td>
+</tr>
+<tr>
+<td><code>BeeHaveMapCenterPointX</code></td>
+<td>float</td>
+<td>Yes*</td>
+<td>Hive X coordinate (UTM or project CRS)</td>
+</tr>
+<tr>
+<td><code>BeeHaveMapCenterPointY</code></td>
+<td>float</td>
+<td>Yes*</td>
+<td>Hive Y coordinate (UTM or project CRS)</td>
+</tr>
+</tbody>
+</table>
+<p>*Only required if <code>Manifest</code> is not provided (single-run mode)</p>
+<h3 id="manifest-file-structure">Manifest File Structure</h3>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>description</code></td>
+<td>string</td>
+<td>Human-readable description</td>
+</tr>
+<tr>
+<td><code>scenario</code></td>
+<td>string</td>
+<td>Path to scenario folder</td>
+</tr>
+<tr>
+<td><code>replicates</code></td>
+<td>integer</td>
+<td>Number of BEEHAVEecotox replicates per combination</td>
+</tr>
+<tr>
+<td><code>weather</code></td>
+<td>string</td>
+<td>Weather data source</td>
+</tr>
+<tr>
+<td><code>hives</code></td>
+<td>array</td>
+<td>List of hive locations with coordinates and IDs</td>
+</tr>
+<tr>
+<td><code>treatments</code></td>
+<td>array</td>
+<td>Pesticide application scenarios</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Document Version</strong>: 1.0<br />
+<strong>xPollinator Version</strong>: 0.1.x<br />
+<strong>Last Updated</strong>: May 2026</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.copy", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "toc.integrate"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
