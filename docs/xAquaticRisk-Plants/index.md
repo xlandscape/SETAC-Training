@@ -2,20 +2,11 @@
 
 This section covers landscape-level aquatic risk assessment for **aquatic macrophytes** (aquatic plants) using the xaquatic-funne workshop version.
 
-## xaquatic-funne — Workshop Version
-
-**For SETAC Training Workshop participants only**
+## xaquatic-funne (Workshop Version)
 
 xaquatic-funne is a modified version of [xAquaticRisk](https://github.com/xlandscape/xAquaticRisk) specifically developed for the workshop. It includes enhanced features and configurations tailored for workshop participants.
 
-Distributed via secure download link with strict license restrictions.
-
-- ⚠️ **Workshop participants only**
-- ⚠️ Cannot be shared or distributed
-- ⚠️ Cannot be uploaded to Git
-- ⚠️ Proprietary restrictive license
-
-[**View Full Documentation →**](workshop-version.md)
+[**View Full Documentation →**](xaqautic-funne.md)
 
 ---
 
