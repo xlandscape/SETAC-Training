@@ -58,3 +58,5 @@ nav:
     - Overview: 'xAquaticRisk-Plants/index.md'
   - Pollinators:
     - Overview: 'xPollinator/index.md'
+    - Complete Workflow Tutorial: 'xPollinator/complete-workflow.md'
+    - Pesticide Fate: 'xPollinator/pesticide-fate.md'
