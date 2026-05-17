@@ -1,0 +1,1957 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://xlandscape.github.io/SETAC-Training/xPollinator/pesticide-fate.html">
+      
+      
+        <link rel="prev" href="complete-workflow.html">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Pesticide Fate - xLandscape Training</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#pesticide-fate-in-xpollinator-and-beehaveecotox" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../index.html" title="xLandscape Training" class="md-header__button md-logo" aria-label="xLandscape Training" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 2h16c1.1 0 2 .9 2 2v6H10v10h4.55q.27.45.54.84c.29.43.57.82.83 1.16H4c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2m4 2H4v10h4zM4 16v4h4v-4zm6-8h10V4H10zm8.5 14s-.58-.65-1.27-1.59c-.09-.13-.19-.27-.29-.41C16 18.66 15 16.89 15 15.5c0-1.9 1.6-3.5 3.5-3.5.53 0 1.04.13 1.5.35 1.17.57 2 1.78 2 3.15 0 1.54-1.23 3.54-2.23 4.91-.69.94-1.27 1.59-1.27 1.59m-1.2-6.4c0 .6.5 1.2 1.2 1.2s1.3-.6 1.2-1.2c0-.6-.6-1.2-1.2-1.2s-1.2.5-1.2 1.2"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            xLandscape Training
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Pesticide Fate
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="light-blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/xlandscape/SETAC-Training" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    SETAC-Training on GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../index.html" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../LandscapeModelling/index.html" class="md-tabs__link">
+          
+  
+  
+  Landscape Modelling
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../xLandscape/index.html" class="md-tabs__link">
+          
+  
+  
+  xLandscape
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../xAquaticRisk-Invertebrates/index.html" class="md-tabs__link">
+          
+  
+  
+  Aquatic Invertebrates
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../xAquaticRisk-Plants/index.html" class="md-tabs__link">
+          
+  
+  
+  Aquatic Plants
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="index.html" class="md-tabs__link">
+          
+  
+  
+  Pollinators
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="xLandscape Training" class="md-nav__button md-logo" aria-label="xLandscape Training" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 2h16c1.1 0 2 .9 2 2v6H10v10h4.55q.27.45.54.84c.29.43.57.82.83 1.16H4c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2m4 2H4v10h4zM4 16v4h4v-4zm6-8h10V4H10zm8.5 14s-.58-.65-1.27-1.59c-.09-.13-.19-.27-.29-.41C16 18.66 15 16.89 15 15.5c0-1.9 1.6-3.5 3.5-3.5.53 0 1.04.13 1.5.35 1.17.57 2 1.78 2 3.15 0 1.54-1.23 3.54-2.23 4.91-.69.94-1.27 1.59-1.27 1.59m-1.2-6.4c0 .6.5 1.2 1.2 1.2s1.3-.6 1.2-1.2c0-.6-.6-1.2-1.2-1.2s-1.2.5-1.2 1.2"/></svg>
+
+    </a>
+    xLandscape Training
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/xlandscape/SETAC-Training" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    SETAC-Training on GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Landscape Modelling
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Landscape Modelling
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LandscapeModelling/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    xLandscape
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    xLandscape
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xLandscape/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aquatic Invertebrates
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Aquatic Invertebrates
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xAquaticRisk-Invertebrates/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xAquaticRisk-Invertebrates/xAquaticRisk-overview.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Model Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xAquaticRisk-Invertebrates/controlpanel.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Control Panel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xAquaticRisk-Invertebrates/xAquaticRiskAnalysis.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Analysis Tool (xARA)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aquatic Plants
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Aquatic Plants
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xAquaticRisk-Plants/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pollinators
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Pollinators
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="complete-workflow.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Complete Workflow Tutorial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pesticide Fate
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="pesticide-fate.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pesticide Fate
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-this-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Matters
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#end-to-end-pesticide-fate-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        End-to-End Pesticide Fate Workflow
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stage-1-application-setup-in-xpollinator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stage 1. Application Setup in xPollinator
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stage 1. Application Setup in xPollinator">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manifest-driven-treatment-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manifest-driven treatment setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-the-manifest-becomes-xrun-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How the manifest becomes .xrun files
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stage-2-patch-level-exposure-generation-in-xpollinator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stage 2. Patch-Level Exposure Generation in xPollinator
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stage 2. Patch-Level Exposure Generation in xPollinator">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-happens-during-source-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What happens during source generation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#current-patch-level-inputs-from-xpollinator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Current patch-level inputs from xPollinator
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#files-produced-for-beehaveecotox" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Files produced for BEEHAVEecotox
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stage-3-how-beehaveecotox-reads-the-landscape-exposure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stage 3. How BEEHAVEecotox Reads the Landscape Exposure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stage-4-patch-level-fate-in-beehaveecotox" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stage 4. Patch-Level Fate in BEEHAVEecotox
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stage 4. Patch-Level Fate in BEEHAVEecotox">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-happens-on-application-day" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What happens on application day
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-patch-decline-is-modelled" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How patch decline is modelled
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-patch-exposure-is-reset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When patch exposure is reset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-patch-level-parameters-affecting-fate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key patch-level parameters affecting fate
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stage-5-uptake-by-foragers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stage 5. Uptake by Foragers
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stage 5. Uptake by Foragers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nectar-route" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nectar route
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pollen-route" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pollen route
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contact-route" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contact route
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#water-route" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Water route
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stage-6-in-hive-fate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stage 6. In-Hive Fate
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stage 6. In-Hive Fate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#honey-compartments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Honey compartments
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nurse-bee-filter-effect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nurse-bee filter effect
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-degradation-in-honey" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optional degradation in honey
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stage-7-toxic-effects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stage 7. Toxic Effects
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameter-reference-where-to-change-what" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameter Reference: Where to Change What
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameter Reference: Where to Change What">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-xpollinator-landscape-and-application-sampling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. xPollinator landscape and application sampling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-patch-level-fate-inside-beehaveecotox" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Patch-level fate inside BEEHAVEecotox
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-in-hive-fate-and-toxicity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. In-hive fate and toxicity
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#important-notes-for-the-setac-tarn-et-garonne-training-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Important Notes for the SETAC Tarn-et-Garonne Training Setup
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-reading-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended Reading Path
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="pesticide-fate-in-xpollinator-and-beehaveecotox">Pesticide Fate in xPollinator and BEEHAVEecotox</h1>
+<p>This page explains how pesticide applications are translated into nectar, pollen, contact, and in-hive exposure in the current xPollinator workflow used by the SETAC training material.</p>
+<p>It focuses on the modelling chain implemented in the working copy of the repositories (all hosted under the <a href="https://github.com/xlandscape">xLandscape GitHub organisation</a>):
+- <a href="https://github.com/xlandscape/xPollinator">xPollinator</a> prepares patch-level pesticide applications and forage inputs
+- BEEHAVEecotox applies decline, uptake, and toxic effects
+- <a href="https://github.com/xlandscape/BeeView-server">BeeView-server</a> and <a href="https://github.com/xlandscape/BeeView">BeeView</a> visualize the resulting colony and landscape outputs</p>
+<h2 id="why-this-matters">Why This Matters</h2>
+<p>For training and risk assessment, it is important to distinguish between three different layers of parameterization:</p>
+<ol>
+<li>
+<p><strong>Landscape application setup</strong>
+   This defines where, when, and how often pesticide applications occur.</p>
+</li>
+<li>
+<p><strong>Patch-level exposure concentrations</strong>
+   This defines the pesticide concentrations assigned to nectar, pollen, contact exposure, and optionally water.</p>
+</li>
+<li>
+<p><strong>Toxicokinetic and toxicodynamic response in BEEHAVEecotox</strong>
+   This defines how long residues persist, how they move into the hive, and how strongly they affect larvae, in-hive bees, and foragers.</p>
+</li>
+</ol>
+<h2 id="end-to-end-pesticide-fate-workflow">End-to-End Pesticide Fate Workflow</h2>
+<p>The pesticide lifecycle in the current xPollinator setup is:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Manifest or .xrun parameters
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    -&gt; xPollinator assigns treated patches and application dates
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    -&gt; xPollinator writes patch-level pesticide fields to Sources.txt
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    -&gt; BEEHAVEecotox reads Sources.txt as INPUT_FILE
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    -&gt; patch concentrations are activated on application day
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    -&gt; first-order decline is applied on patch
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    -&gt; foragers receive oral and contact doses during foraging
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    -&gt; contaminated nectar, pollen, and water enter the hive
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    -&gt; in-hive concentrations may decline further in honey stores
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    -&gt; cohort-specific dose-response functions determine mortality
+</span></code></pre></div>
+<h2 id="stage-1-application-setup-in-xpollinator">Stage 1. Application Setup in xPollinator</h2>
+<h3 id="manifest-driven-treatment-setup">Manifest-driven treatment setup</h3>
+<p>For the Tarn-et-Garonne batch workflow, the manifest controls the number of applications per treated run.</p>
+<p>Current manifest file:
+- <a href="https://github.com/xlandscape/xPollinator/blob/main/scripts/Scenario-TarnEtGaronne_manifest.json">scripts/Scenario-TarnEtGaronne_manifest.json</a></p>
+<p>Relevant fields:
+- <code>treated_min_applications</code>
+- <code>treated_max_applications</code>
+- <code>random_seed</code> for each hive</p>
+<p>In the current manifest, treated runs allow between <code>0</code> and <code>3</code> applications per treated patch. Because the minimum is <code>0</code>, a treated run can still contain some treated patches with no sampled application.</p>
+<h3 id="how-the-manifest-becomes-xrun-files">How the manifest becomes .xrun files</h3>
+<p>The batch runner writes these values into generated <code>.xrun</code> files:
+- <a href="https://github.com/xlandscape/xPollinator/blob/main/scripts/run_batch.py">scripts/run_batch.py</a></p>
+<p>For each hive:
+- untreated runs set <code>MinNumberApplications = 0</code> and <code>MaxNumberApplications = 0</code>
+- treated runs set <code>MinNumberApplications</code> and <code>MaxNumberApplications</code> from the manifest</p>
+<p>The same hive random seed is reused for treated and untreated run generation, so treatment sampling is reproducible for that hive.</p>
+<h2 id="stage-2-patch-level-exposure-generation-in-xpollinator">Stage 2. Patch-Level Exposure Generation in xPollinator</h2>
+<p>The BeeHaveEcotox component in xPollinator creates the patch-level exposure file used by NetLogo:
+- <a href="https://github.com/xlandscape/xPollinator/blob/main/model/variant/BeeHaveEcotox/BeeHaveEcotox.py">model/variant/BeeHaveEcotox/BeeHaveEcotox.py</a></p>
+<h3 id="what-happens-during-source-generation">What happens during source generation</h3>
+<p>Inside <code>create_forage_input_file</code>, xPollinator:</p>
+<ol>
+<li>Consolidates the landscape into BEEHAVE-compatible forage patches.</li>
+<li>Identifies which consolidated patches belong to the treated vegetation type.</li>
+<li>Samples the number of applications for each treated patch.</li>
+<li>Samples the application day for each application.</li>
+<li>Draws one nectar concentration, one pollen concentration, and one contact value for that patch.</li>
+<li>Writes those values into <code>Sources.txt</code> and <code>applications.txt</code>.</li>
+</ol>
+<h3 id="current-patch-level-inputs-from-xpollinator">Current patch-level inputs from xPollinator</h3>
+<p>These values are passed from the xLandscape composition in:
+- <a href="https://github.com/xlandscape/xPollinator/blob/main/model/variant/mc.xml">model/variant/mc.xml</a></p>
+<p>Relevant parameters are:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Current role</th>
+<th>Current default/location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>AppliedVegetationId</code></td>
+<td>Which vegetation type can receive applications</td>
+<td><code>2102</code> in <a href="https://github.com/xlandscape/xPollinator/blob/main/model/variant/mc.xml">model/variant/mc.xml</a></td>
+</tr>
+<tr>
+<td><code>MinNumberApplications</code></td>
+<td>Minimum sampled applications per treated patch</td>
+<td>from <code>.xrun</code> / manifest</td>
+</tr>
+<tr>
+<td><code>MaxNumberApplications</code></td>
+<td>Maximum sampled applications per treated patch</td>
+<td>from <code>.xrun</code> / manifest</td>
+</tr>
+<tr>
+<td><code>FirstDayOfYearApplications</code></td>
+<td>Earliest sampled day of year</td>
+<td><code>100</code></td>
+</tr>
+<tr>
+<td><code>LastDayOfYearApplications</code></td>
+<td>Latest sampled day of year</td>
+<td><code>250</code></td>
+</tr>
+<tr>
+<td><code>ConcNectarMean</code></td>
+<td>Mean nectar residue concentration</td>
+<td><code>1320 µg/kg</code></td>
+</tr>
+<tr>
+<td><code>ConcNectarStd</code></td>
+<td>Standard deviation for nectar concentration</td>
+<td><code>132 µg/kg</code></td>
+</tr>
+<tr>
+<td><code>ConcPollenMean</code></td>
+<td>Mean pollen residue concentration</td>
+<td><code>36200 µg/kg</code></td>
+</tr>
+<tr>
+<td><code>ConcPollenStd</code></td>
+<td>Standard deviation for pollen concentration</td>
+<td><code>3620 µg/kg</code></td>
+</tr>
+<tr>
+<td><code>ContactToxicityMean</code></td>
+<td>Mean contact application term</td>
+<td><code>0.4 µg/bee</code> in xPollinator naming, written into patch contact field</td>
+</tr>
+<tr>
+<td><code>ContactToxicityStd</code></td>
+<td>Standard deviation for contact term</td>
+<td><code>0.04</code></td>
+</tr>
+<tr>
+<td><code>ExposurePeriod</code></td>
+<td>Duration written for each patch application</td>
+<td><code>10000 d</code></td>
+</tr>
+<tr>
+<td><code>RandomSeed</code></td>
+<td>Controls the patch-level random draws</td>
+<td>from <code>.xrun</code> / manifest</td>
+</tr>
+</tbody>
+</table>
+<h3 id="files-produced-for-beehaveecotox">Files produced for BEEHAVEecotox</h3>
+<p>The main file is <code>Sources.txt</code>, written into each run folder under:
+- <code>run/&lt;SimID&gt;/mcs/&lt;MC&gt;/processing/BeeHave/Sources.txt</code></p>
+<p>Each patch line contains these ecotox columns:
+- <code>ETOX_ApplicationList_patch</code>
+- <code>ETOX_ExposurePeriodsList_patch</code>
+- <code>ETOX_PPPConcNectar_patch</code>
+- <code>ETOX_PPPConcPollen_patch</code>
+- <code>ETOX_PPPContact_patch</code>
+- <code>ETOX_WaterVolume_patch</code>
+- <code>ETOX_WaterConc_patch</code>
+- <code>ETOX_RUD_patch</code></p>
+<p>The accompanying <code>applications.txt</code> file is also written for downstream inspection and BeeView-server exposure summaries.</p>
+<h2 id="stage-3-how-beehaveecotox-reads-the-landscape-exposure">Stage 3. How BEEHAVEecotox Reads the Landscape Exposure</h2>
+<p>The NetLogo experiment used by xPollinator is templated here:
+- <a href="https://github.com/xlandscape/xPollinator/blob/main/model/variant/BeeHaveEcotox/template/experiment.xml">model/variant/BeeHaveEcotox/template/experiment.xml</a></p>
+<p>Important settings in that experiment template:
+- <code>ReadInfile = true</code>
+- <code>INPUT_FILE = "Sources.txt"</code></p>
+<p>That means BEEHAVEecotox uses the patch-specific exposure information written by xPollinator rather than the two-patch GUI-only setup.</p>
+<p>The updated landscape extension is documented in the bundled reports (located in <code>model/variant/BeeHaveEcotox/BEEHAVEecotox/</code> inside the xPollinator installation):
+- <code>R2260099-1_ODD_Amendment_BEEHAVEecotox_lanscape_extension.pdf</code>
+- <code>R2260099-2_Manual_BEEHAVEecotox_landscape_extension.pdf</code></p>
+<p>These reports confirm that the new input-file format stores one flowering period per patch plus the ecotoxicological application fields listed above.</p>
+<h2 id="stage-4-patch-level-fate-in-beehaveecotox">Stage 4. Patch-Level Fate in BEEHAVEecotox</h2>
+<p>The main patch-level exposure procedure is in <code>model/variant/BeeHaveEcotox/BEEHAVEEcotox/A7-ModelCode_BEEHAVE-ECOTOX.nlogo</code> (bundled with the BEEHAVEecotox installation).</p>
+<h3 id="what-happens-on-application-day">What happens on application day</h3>
+<p>When the current simulation day matches <code>ETOX_NextAppDay_patch</code>, the model:</p>
+<ol>
+<li>Adds nectar residue concentration to the active nectar contamination pool.</li>
+<li>Adds pollen residue concentration to the active pollen contamination pool.</li>
+<li>Converts the patch contact term into a per-bee contact dose using <code>ETOX_RUD_patch</code>.</li>
+<li>Optionally activates water contamination if water foraging is enabled.</li>
+</ol>
+<h3 id="how-patch-decline-is-modelled">How patch decline is modelled</h3>
+<p>After activation, the patch-level residue declines by first-order kinetics using the selected substance DT50:</p>
+<p>$$
+C_{t+1} = C_t \cdot e^{-\ln(2) / DT50}
+$$</p>
+<p>This same form is applied to:
+- nectar concentration at the patch
+- pollen concentration at the patch
+- contact dose term at the patch
+- water concentration at the patch, if water foraging is enabled</p>
+<h3 id="when-patch-exposure-is-reset">When patch exposure is reset</h3>
+<p>If the configured exposure period ends and no overlapping application starts on the same day, the patch-level contamination terms are reset to zero. Otherwise, they continue to decline or accumulate depending on the application sequence.</p>
+<h3 id="key-patch-level-parameters-affecting-fate">Key patch-level parameters affecting fate</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Meaning</th>
+<th>Where to change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ETOX_ApplicationList_patch</code></td>
+<td>Start day(s) of application</td>
+<td>generated by xPollinator in <code>Sources.txt</code></td>
+</tr>
+<tr>
+<td><code>ETOX_ExposurePeriodsList_patch</code></td>
+<td>Duration of each application</td>
+<td>generated by xPollinator in <code>Sources.txt</code></td>
+</tr>
+<tr>
+<td><code>ETOX_PPPConcNectar_patch</code></td>
+<td>Initial nectar concentration at patch</td>
+<td>generated by xPollinator in <code>Sources.txt</code></td>
+</tr>
+<tr>
+<td><code>ETOX_PPPConcPollen_patch</code></td>
+<td>Initial pollen concentration at patch</td>
+<td>generated by xPollinator in <code>Sources.txt</code></td>
+</tr>
+<tr>
+<td><code>ETOX_PPPContact_patch</code></td>
+<td>Initial contact application rate term</td>
+<td>generated by xPollinator in <code>Sources.txt</code></td>
+</tr>
+<tr>
+<td><code>ETOX_RUD_patch</code></td>
+<td>Contact conversion factor</td>
+<td>currently written as <code>21</code> by xPollinator</td>
+</tr>
+<tr>
+<td><code>etox_DT50_Substance</code></td>
+<td>Residue dissipation half-life on patch</td>
+<td>substance definition in NetLogo</td>
+</tr>
+<tr>
+<td><code>ETOX_contactexp_oneday</code></td>
+<td>If true, contact exposure only occurs on application day</td>
+<td>experiment/default settings in NetLogo</td>
+</tr>
+<tr>
+<td><code>Etox_ContactSum</code></td>
+<td>If true, contact doses sum over visits instead of averaging</td>
+<td>NetLogo switch/default</td>
+</tr>
+</tbody>
+</table>
+<h2 id="stage-5-uptake-by-foragers">Stage 5. Uptake by Foragers</h2>
+<p>Forager uptake occurs during nectar, pollen, and optional water collection in <code>model/variant/BeeHaveEcotox/BEEHAVEEcotox/A7-ModelCode_BEEHAVE-ECOTOX.nlogo</code>.</p>
+<h3 id="nectar-route">Nectar route</h3>
+<p>When a forager returns from a nectar patch:
+- patch nectar concentration is converted into an oral dose in the honey stomach
+- part of that dose remains with the forager
+- part is transferred into hive honey stores</p>
+<h3 id="pollen-route">Pollen route</h3>
+<p>When a pollen forager returns:
+- pollen contamination is carried in the pollen basket
+- the resulting pollen dose enters later in-hive feeding processes</p>
+<h3 id="contact-route">Contact route</h3>
+<p>Contact dose is updated on flower visits using the patch-specific contact term. The model can either:
+- sum contact exposure over visits, or
+- average it,</p>
+<p>depending on the <code>Etox_ContactSum</code> switch.</p>
+<h3 id="water-route">Water route</h3>
+<p>If <code>ETOX_Water_foraging</code> is enabled:
+- contaminated water can be collected from patches
+- part of the dose enters the forager
+- part is mixed into stored hive resources</p>
+<h2 id="stage-6-in-hive-fate">Stage 6. In-Hive Fate</h2>
+<p>In-hive exposure update is handled in <code>model/variant/BeeHaveEcotox/BEEHAVEEcotox/A7-ModelCode_BEEHAVE-ECOTOX.nlogo</code>.</p>
+<h3 id="honey-compartments">Honey compartments</h3>
+<p>BEEHAVEecotox tracks pesticide concentrations in several honey compartments:
+- uncapped honey of today (<code>D0</code>)
+- uncapped honey of previous days (<code>D1</code> to <code>D4</code>)
+- capped honey</p>
+<p>This allows daily inflow, ageing, and mixing of contaminated nectar-derived stores.</p>
+<h3 id="nurse-bee-filter-effect">Nurse-bee filter effect</h3>
+<p>Larval exposure is not identical to the raw hive concentration. Two filter factors modify the effective dose passed on by nurse bees:
+- <code>etox_FF_Nursebees_Nectar_Substance</code>
+- <code>etox_FF_Nursebees_Pollen_Substance</code></p>
+<p>These scale how much of the nectar- and pollen-derived dose reaches larvae.</p>
+<h3 id="optional-degradation-in-honey">Optional degradation in honey</h3>
+<p>If honey degradation is enabled for the selected substance, in-hive concentrations also decline by first-order kinetics using <code>etox_DT50_honey_Substance</code>.</p>
+<p>The current code applies this to all honey compartments before the daily compartment shift and recapping logic.</p>
+<h2 id="stage-7-toxic-effects">Stage 7. Toxic Effects</h2>
+<p>Mortality is then computed from daily oral and contact doses using dose-response functions based on LD50 and slope parameters.</p>
+<p>These are applied separately for:
+- foragers
+- in-hive bees
+- larvae
+- drones</p>
+<p>The key substance parameters are:
+- <code>etox_Forager_Oral_LD50_Substance</code>
+- <code>etox_Forager_Oral_slope_Substance</code>
+- <code>etox_Forager_contact_LD50_Substance</code>
+- <code>etox_Forager_contact_slope_Substance</code>
+- <code>etox_Larvae_Oral_LD50_Substance</code>
+- <code>etox_Larvae_Oral_slope_Substance</code>
+- <code>etox_Forager_ImmediateMortality_Substance</code></p>
+<h2 id="parameter-reference-where-to-change-what">Parameter Reference: Where to Change What</h2>
+<h3 id="a-xpollinator-landscape-and-application-sampling">A. xPollinator landscape and application sampling</h3>
+<table>
+<thead>
+<tr>
+<th>Change goal</th>
+<th>Parameter(s)</th>
+<th>File</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Change treated vs untreated application counts</td>
+<td><code>treated_min_applications</code>, <code>treated_max_applications</code></td>
+<td><a href="https://github.com/xlandscape/xPollinator/blob/main/scripts/Scenario-TarnEtGaronne_manifest.json">scripts/Scenario-TarnEtGaronne_manifest.json</a></td>
+</tr>
+<tr>
+<td>Change hive-specific reproducibility</td>
+<td><code>random_seed</code> per hive</td>
+<td><a href="https://github.com/xlandscape/xPollinator/blob/main/scripts/Scenario-TarnEtGaronne_manifest.json">scripts/Scenario-TarnEtGaronne_manifest.json</a></td>
+</tr>
+<tr>
+<td>Change the treated vegetation type</td>
+<td><code>AppliedVegetationId</code></td>
+<td><a href="https://github.com/xlandscape/xPollinator/blob/main/model/variant/mc.xml">model/variant/mc.xml</a></td>
+</tr>
+<tr>
+<td>Change allowed application window</td>
+<td><code>FirstDayOfYearApplications</code>, <code>LastDayOfYearApplications</code></td>
+<td><a href="https://github.com/xlandscape/xPollinator/blob/main/model/variant/mc.xml">model/variant/mc.xml</a></td>
+</tr>
+<tr>
+<td>Change mean and variability of nectar residues</td>
+<td><code>ConcNectarMean</code>, <code>ConcNectarStd</code></td>
+<td><a href="https://github.com/xlandscape/xPollinator/blob/main/model/variant/mc.xml">model/variant/mc.xml</a></td>
+</tr>
+<tr>
+<td>Change mean and variability of pollen residues</td>
+<td><code>ConcPollenMean</code>, <code>ConcPollenStd</code></td>
+<td><a href="https://github.com/xlandscape/xPollinator/blob/main/model/variant/mc.xml">model/variant/mc.xml</a></td>
+</tr>
+<tr>
+<td>Change mean and variability of contact term</td>
+<td><code>ContactToxicityMean</code>, <code>ContactToxicityStd</code></td>
+<td><a href="https://github.com/xlandscape/xPollinator/blob/main/model/variant/mc.xml">model/variant/mc.xml</a></td>
+</tr>
+<tr>
+<td>Change duration written for each exposure event</td>
+<td><code>ExposurePeriod</code></td>
+<td><a href="https://github.com/xlandscape/xPollinator/blob/main/model/variant/mc.xml">model/variant/mc.xml</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="b-patch-level-fate-inside-beehaveecotox">B. Patch-level fate inside BEEHAVEecotox</h3>
+<table>
+<thead>
+<tr>
+<th>Change goal</th>
+<th>Parameter(s)</th>
+<th>File</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Change residue dissipation speed on patch</td>
+<td><code>etox_DT50_Substance</code></td>
+<td>NetLogo substance definition or <code>SUBSTANCE_FILE</code></td>
+</tr>
+<tr>
+<td>Change contact conversion factor</td>
+<td><code>ETOX_RUD_patch</code> or GUI <code>ETOX_RUD</code></td>
+<td><code>Sources.txt</code> generated by xPollinator or NetLogo GUI mode</td>
+</tr>
+<tr>
+<td>Make contact only occur on application day</td>
+<td><code>ETOX_contactexp_oneday</code></td>
+<td><a href="https://github.com/xlandscape/xPollinator/blob/main/model/variant/BeeHaveEcotox/template/experiment.xml">model/variant/BeeHaveEcotox/template/experiment.xml</a> or NetLogo default</td>
+</tr>
+<tr>
+<td>Sum rather than average repeated contact visits</td>
+<td><code>Etox_ContactSum</code></td>
+<td>NetLogo default/interface</td>
+</tr>
+<tr>
+<td>Enable water route</td>
+<td><code>ETOX_Water_foraging</code></td>
+<td><a href="https://github.com/xlandscape/xPollinator/blob/main/model/variant/BeeHaveEcotox/template/experiment.xml">model/variant/BeeHaveEcotox/template/experiment.xml</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="c-in-hive-fate-and-toxicity">C. In-hive fate and toxicity</h3>
+<table>
+<thead>
+<tr>
+<th>Change goal</th>
+<th>Parameter(s)</th>
+<th>File</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Change in-hive honey degradation</td>
+<td><code>etox_degradation_honey_Substance</code>, <code>etox_DT50_honey_Substance</code></td>
+<td>NetLogo substance definition or <code>SUBSTANCE_FILE</code></td>
+</tr>
+<tr>
+<td>Change nectar filtering to larvae</td>
+<td><code>etox_FF_Nursebees_Nectar_Substance</code></td>
+<td>NetLogo substance definition or <code>SUBSTANCE_FILE</code></td>
+</tr>
+<tr>
+<td>Change pollen filtering to larvae</td>
+<td><code>etox_FF_Nursebees_Pollen_Substance</code></td>
+<td>NetLogo substance definition or <code>SUBSTANCE_FILE</code></td>
+</tr>
+<tr>
+<td>Change forager oral sensitivity</td>
+<td><code>etox_Forager_Oral_LD50_Substance</code>, <code>etox_Forager_Oral_slope_Substance</code></td>
+<td>NetLogo substance definition or <code>SUBSTANCE_FILE</code></td>
+</tr>
+<tr>
+<td>Change forager contact sensitivity</td>
+<td><code>etox_Forager_contact_LD50_Substance</code>, <code>etox_Forager_contact_slope_Substance</code></td>
+<td>NetLogo substance definition or <code>SUBSTANCE_FILE</code></td>
+</tr>
+<tr>
+<td>Change larval oral sensitivity</td>
+<td><code>etox_Larvae_Oral_LD50_Substance</code>, <code>etox_Larvae_Oral_slope_Substance</code></td>
+<td>NetLogo substance definition or <code>SUBSTANCE_FILE</code></td>
+</tr>
+<tr>
+<td>Enable acute immediate forager mortality</td>
+<td><code>etox_Forager_ImmediateMortality_Substance</code></td>
+<td>NetLogo substance definition or <code>SUBSTANCE_FILE</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="important-notes-for-the-setac-tarn-et-garonne-training-setup">Important Notes for the SETAC Tarn-et-Garonne Training Setup</h2>
+<ol>
+<li>
+<p><strong>Patch concentrations are currently generated in xPollinator, not entered manually in NetLogo.</strong>
+   For SETAC training runs, the operational source of patch exposure is the <code>Sources.txt</code> file written by xPollinator.</p>
+</li>
+<li>
+<p><strong>The treated scenario currently allows zero applications on a patch.</strong>
+   This follows directly from the current manifest setting <code>treated_min_applications = 0</code>.</p>
+</li>
+<li>
+<p><strong>The same application pattern is reused across replicate colony runs for a given hive and treatment.</strong>
+   Replicates differ through BEEHAVE random seeds, not through independently resampled application patterns.</p>
+</li>
+<li>
+<p><strong>Patch residue decline and in-hive honey decline are separate processes.</strong>
+   <code>etox_DT50_Substance</code> governs decline on the patch. <code>etox_DT50_honey_Substance</code> governs optional decline inside hive honey stores.</p>
+</li>
+</ol>
+<h2 id="recommended-reading-path">Recommended Reading Path</h2>
+<p>If you are following the SETAC training material, read the pages in this order:</p>
+<ol>
+<li><a href="index.html">xPollinator overview</a></li>
+<li><a href="complete-workflow.html">Complete workflow tutorial</a></li>
+<li><a href="pesticide-fate.html">This pesticide fate page</a></li>
+</ol>
+<p>The workflow tutorial explains how to run the model. This page explains how to interpret the pesticide-related parameters in those runs.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.copy", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "toc.integrate"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
