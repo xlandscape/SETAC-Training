@@ -10,6 +10,8 @@ This section covers landscape-level risk assessment for **pollinator populations
 - Importing results and visualizing them in BeeView
 - Advanced multi-hive and treated scenarios with statistical comparison
 
+For a dedicated explanation of how pesticide applications become patch residues, in-hive doses, and colony effects, see [Pesticide Fate in xPollinator and BEEHAVEecotox](pesticide-fate.md).
+
 Estimated time: **2-3 hours** for the complete workflow
 
 ## What You Will Learn
@@ -63,29 +65,18 @@ Based on the BEEHAVE model (NetLogo), extended with toxicological effects:
 
 **Key feature**: Multiple replicates (typically 100) use different random seeds to model natural population variability, enabling probabilistic assessment of colony survival under different scenarios.
 
-### Regulatory Context
-xPollinator is designed to support **EFSA Bee Guidance** (EFSA 2018) requirements for:
-- Environmental exposure assessment of pesticide residues in bee resources
-- Effects assessment using validated population models
-- Risk characterization for honeybee colonies in realistic landscapes
-
-For detailed setup and walkthrough with real data, see the [Complete Workflow Tutorial](complete-workflow.md).
-
 ## Resources
 
 ### Tutorials
 - **[Complete Workflow Tutorial](complete-workflow.md)** — Step-by-step setup and end-to-end example (Windows)
 - Prerequisites, installation, running simulations, visualization, statistical comparison
+- **[Pesticide Fate in xPollinator and BEEHAVEecotox](pesticide-fate.md)** — Detailed explanation of application timing, residue decline, uptake, and in-hive exposure
 
 ### Documentation & Tools
 - [xPollinator GitHub Repository](https://github.com/xlandscape/xPollinator) — Model source code and component reference
 - [xLandscape Framework](https://github.com/xlandscape) — Core modeling framework
 - [BeeView-server](https://github.com/xlandscape/BeeView-server) — REST API backend and database
 - [BeeView](https://github.com/xlandscape/BeeView) — Interactive visualization frontend
-
-### Regulatory References
-- [EFSA Bee Guidance](https://efsa.onlinelibrary.wiley.com/doi/10.2903/j.efsa.2018.5224) — Guidance document on risk assessment for bees (honey bees, wild bees, bumblebees)
-- [BEEHAVE Documentation](https://beehave-model.github.io/) — Original BEEHAVE model documentation
 
 ### Demo Scenarios
 - **Tarn-et-Garonne** — Multi-hive French agricultural landscape with real LULC and weather data

@@ -8,25 +8,25 @@ This tutorial walks you through the entire xPollinator landscape simulation and 
 
 ## 1. The xLandscape Components: An Overview
 
-The xPollinator risk assessment workflow integrates four key software components:
+The xPollinator workflow integrates four key software components:
 
 ### 1.1 xLandscape Framework (Core Engine)
 
-The **xLandscape framework** is a microkernel-based landscape modeling platform that provides:
+The **[xLandscape framework](https://github.com/xlandscape)** is a microkernel-based landscape modeling platform that provides:
 - **Component-based architecture**: Modular software components that transform spatial and temporal data
 - **Semantic data handling**: Automatic tracking of units, coordinate systems, and data scales
 - **Multidimensional storage**: HDF5-based data store for efficient access to large spatiotemporal arrays
 - **Monte Carlo simulation**: Support for propagating natural variability across replicate runs
 
-**In your workflow**: Acts as the orchestration engine that chains xPollinator components together.
-
 ### 1.2 xPollinator Landscape Model
 
-**xPollinator** is a landscape-scale model that simulates:
+**[xPollinator](https://github.com/xlandscape/xPollinator)** is a landscape-scale model that simulates:
 - **Land use/land cover** processing: Reads GIS shapefiles and categorizes vegetation types
 - **Bee forage availability**: Computes daily nectar and pollen availability from vegetation phenology
 - **Pesticide exposure**: Calculates how pesticide applications contaminate foraging resources
 - **Population dynamics**: Feeds forage and exposure data to the BEEHAVEecotox model
+
+For a detailed explanation of the pesticide lifecycle from field application to residue decline and colony exposure, see [Pesticide Fate in xPollinator and BEEHAVEecotox](pesticide-fate.md).
 
 **Data pipeline**:
 ```
@@ -57,7 +57,7 @@ HDF5 output store (arr.dat)
 
 ### 1.4 BeeView-server (Data Processing Backend)
 
-**BeeView-server** is a FastAPI web service that:
+**[BeeView-server](https://github.com/xlandscape/BeeView-server)** is a FastAPI web service that:
 - Loads xPollinator HDF5 outputs and BEEHAVEecotox CSV results
 - Stores data in a DuckDB spatial database with normalized tables
 - Serves REST API endpoints for spatial (GeoJSON features) and temporal (timeseries) queries
@@ -67,13 +67,13 @@ HDF5 output store (arr.dat)
 
 ### 1.5 BeeView (Interactive Frontend)
 
-**BeeView** is a React + Vite web application providing:
-- **Interactive map**: Visualize nectar, pollen, vegetation, or pesticide exposure across the landscape
-- **Time-series charts**: Daily nectar/pollen availability and bee population metrics
-- **Comparison view**: Analyze survival differences between treated and untreated scenarios
+**[BeeView](https://github.com/xlandscape/BeeView)** is a React + Vite web application providing:
+- **Interactive map**: Visualize nectar, pollen, vegetation, or pesticide exposure across the landscape (see [Map Layers](https://github.com/xlandscape/BeeView/tree/develop/docs/map-layers.md))
+- **Time-series charts**: Daily nectar/pollen availability and bee population metrics (see [Nectar & Pollen Charts](https://github.com/xlandscape/BeeView/tree/develop/docs/charts-nectar-pollen.md), [Bee Population Charts](https://github.com/xlandscape/BeeView/tree/develop/docs/charts-bee-population.md))
+- **Comparison view**: Analyze survival differences between treated and untreated scenarios (see [Compare Runs](https://github.com/xlandscape/BeeView/tree/develop/docs/charts-compare.md))
 - **Feature selection**: Click map polygons to drill down into specific parcels
 
-**Desktop option**: Packaged as an Electron app for offline use.
+For the full BeeView user guide, see the [BeeView Documentation](https://github.com/xlandscape/BeeView/tree/develop/docs/index.md).
 
 ---
 
@@ -85,11 +85,12 @@ Before starting, ensure you have the following on your Windows machine:
 
 | Software | Version | Purpose | Download |
 |----------|---------|---------|----------|
-| **Git** | ≥2.30 | Version control & cloning repos | https://git-scm.com/download/win |
+| **Git** | ≥2.30 | Version control & cloning repos | [git-scm.com](https://git-scm.com/download/win) |
 | **Python** | 3.9.7+ | Required for xLandscape | Bundled in xPollinator (see §3.1) |
-| **Node.js** | ≥18 | JavaScript runtime for BeeView | https://nodejs.org/en/ (LTS recommended) |
+| **Java runtime (JDK 24)** | xLandscape bundle | Required by BEEHAVEecotox | [jdk-24-v1.0.zip](https://xlandscape.org/releases/jdk-24-v1.0.zip) |
+| **Node.js** | ≥18 | JavaScript runtime for BeeView | [nodejs.org](https://nodejs.org/en/) (LTS recommended) |
 | **Python virtualenv** | Built-in | Virtual environment | `pip install virtualenv` |
-| **Text editor/IDE** | VS Code recommended | For viewing configs & logs | https://code.visualstudio.com/ |
+| **Text editor/IDE** | VS Code recommended | For viewing configs & logs | [code.visualstudio.com](https://code.visualstudio.com/) |
 
 ### 2.2 Hardware Requirements
 
@@ -102,6 +103,18 @@ Before starting, ensure you have the following on your Windows machine:
 - **Windows 10/11** with command prompt or PowerShell
 - **Firewall**: May need to allow localhost traffic on ports 32000 (server) and 8081 (frontend)
 - **SSL/Certificate issues**: If behind corporate VPN, see [Git network troubleshooting](../../reference/troubleshooting.md)
+
+### 2.4 One-Time Java Runtime Setup for BeeHaveEcotox
+
+Before running any xPollinator simulation with BEEHAVEecotox, download and extract the Java runtime bundle:
+
+1. Download: [jdk-24-v1.0.zip](https://xlandscape.org/releases/jdk-24-v1.0.zip)
+2. Extract the folder `jdk-24` to:
+  `C:\xLandscape\xPollinator\model\variant\BeeHaveEcotox\`
+3. Verify the file exists:
+  `C:\xLandscape\xPollinator\model\variant\BeeHaveEcotox\jdk-24\bin\java.exe`
+
+If this runtime is missing, simulation startup fails with: `Java runtime not found`.
 
 ---
 
@@ -120,12 +133,21 @@ cd C:\xLandscape
 git clone https://github.com/xlandscape/xPollinator.git
 cd xPollinator
 
+# Initialize required submodules (model/core and BeeHaveEcotox)
+git submodule update --init --recursive
+
 # Clone BeeView-server (data processing backend)
 cd ..
 git clone https://github.com/xlandscape/BeeView-server.git
 
 # Clone BeeView (frontend visualization)
 git clone https://github.com/xlandscape/BeeView.git
+
+# BeeView source code is on develop branch
+cd BeeView
+git fetch --all
+git checkout develop
+cd ..
 ```
 
 **Directory structure after cloning**:
@@ -174,6 +196,10 @@ venv\Scripts\Activate.ps1
 # Install dependencies
 pip install --upgrade pip
 pip install -r requirements.txt
+
+# If pip fails with SSL certificate errors (common on corporate VPNs), run:
+# pip install --verbose --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org pip-system-certs
+# pip install --trusted-host pypi.python.org --trusted-host files.pythonhosted.org --trusted-host pypi.org -r requirements.txt
 ```
 
 **Expected output**: Installation of FastAPI, DuckDB, h5py, numpy, geopandas, shapely, SQLAlchemy, and other dependencies (~100 MB).
@@ -210,17 +236,28 @@ xPollinator is configured via XML parameter files (.xrun). A template is provide
 ```xml
 <Parameters>
   <SimID>my_first_run</SimID>
-  <Project>scenario/Tarn-et-Garonne</Project>
+  <Project>scenario/Tarn-et-Garonne-small</Project>
+  <NumberMC>1</NumberMC>
+  <SimulationStart>2021-01-01</SimulationStart>
+  <SimulationEnd>2021-12-31</SimulationEnd>
   <NumberBeeHaveTimesteps>365</NumberBeeHaveTimesteps>
   <BeeHaveMapCenterPointX>127406.9408</BeeHaveMapCenterPointX>
   <BeeHaveMapCenterPointY>5482559.8501</BeeHaveMapCenterPointY>
+  <NumberBeeHaveReplicates>1</NumberBeeHaveReplicates>
+  <BeeHaveRandomSeed>1</BeeHaveRandomSeed>
+  <BeeHaveWeather>Rothamsted (2009)</BeeHaveWeather>
+  <MinNumberApplications>0</MinNumberApplications>
+  <MaxNumberApplications>0</MaxNumberApplications>
+  <RunLabel>my_first_run</RunLabel>
+  <HiveGroupId>default</HiveGroupId>
 </Parameters>
 ```
 
 | Parameter | Meaning | Example |
 |-----------|---------|---------|
 | `SimID` | Unique name for this run (creates `run/<SimID>/`) | `my_first_run` |
-| `Project` | Path to landscape scenario (relative to `model/` folder) | `scenario/Tarn-et-Garonne` |
+| `Project` | Path to landscape scenario (relative to repository root) | `scenario/Tarn-et-Garonne-small` |
+| `NumberMC` | Number of Monte Carlo runs | `1` |
 | `NumberBeeHaveTimesteps` | Simulation duration in days (typically 365) | `365` |
 | `BeeHaveMapCenterPointX` | Hive X coordinate (UTM Zone 31N for France) | `127406.9408` |
 | `BeeHaveMapCenterPointY` | Hive Y coordinate (UTM Zone 31N for France) | `5482559.8501` |
@@ -234,12 +271,23 @@ Create a new file in the xPollinator root:
 **File**: `C:\xLandscape\xPollinator\tutorial_single_untreated.xrun`
 
 ```xml
+<?xml version="1.0" encoding="utf-8"?>
 <Parameters>
   <SimID>tutorial_single_untreated</SimID>
-  <Project>scenario/Tarn-et-Garonne</Project>
+  <Project>scenario/Tarn-et-Garonne-small</Project>
+  <NumberMC>1</NumberMC>
+  <SimulationStart>2021-01-01</SimulationStart>
+  <SimulationEnd>2021-12-31</SimulationEnd>
   <NumberBeeHaveTimesteps>365</NumberBeeHaveTimesteps>
   <BeeHaveMapCenterPointX>127406.9408</BeeHaveMapCenterPointX>
   <BeeHaveMapCenterPointY>5482559.8501</BeeHaveMapCenterPointY>
+  <NumberBeeHaveReplicates>1</NumberBeeHaveReplicates>
+  <BeeHaveRandomSeed>1</BeeHaveRandomSeed>
+  <BeeHaveWeather>Rothamsted (2009)</BeeHaveWeather>
+  <MinNumberApplications>0</MinNumberApplications>
+  <MaxNumberApplications>0</MaxNumberApplications>
+  <RunLabel>tutorial_single_untreated</RunLabel>
+  <HiveGroupId>default</HiveGroupId>
 </Parameters>
 ```
 
@@ -267,7 +315,7 @@ cd C:\xLandscape\xPollinator
 [INFO] Loading vegetation classes...
 [INFO] Computing BeeForage (nectar/pollen timeseries)...
 [INFO] Preparing BeeHaveEcotox inputs...
-[INFO] Running BEEHAVEecotox (100 replicates)...
+[INFO] Running BEEHAVEecotox (1 replicate)...
 [INFO] Simulation complete!
 ```
 
@@ -287,7 +335,7 @@ ls
 #   └── arr.dat          (HDF5 multidimensional data store)
 # processing/
 #   └── BeeHave/
-#       ├── output.csv   (100 replicates x 365 days of colony metrics)
+#       ├── output.csv   (1 replicate x 365 days of colony metrics in this tutorial)
 #       └── segments.shp (radial grid geometry)
 ```
 
@@ -313,7 +361,7 @@ Copy-Item "C:\xLandscape\xPollinator\run\tutorial_single_untreated\mcs\0\process
           "C:\xLandscape\BeeView-server\data\output.csv"
 
 # Copy land use/land cover shapefile (already in scenario, but ensure it's in data/)
-Copy-Item "C:\xLandscape\xPollinator\scenario\Tarn-et-Garonne\geo\lulc.*" `
+Copy-Item "C:\xLandscape\xPollinator\scenario\Tarn-et-Garonne-small\geo\lulc.*" `
           "C:\xLandscape\BeeView-server\data\"
 
 # Verify files are present
@@ -415,7 +463,7 @@ Once BeeView loads, you should see:
 
 **[PLACEHOLDER: Add screenshot of main map interface with labeled components]**
 
-The central map displays land cover classes using color-coded polygons:
+The central map displays land cover classes using color-coded polygons (see [Map Layers](https://github.com/xlandscape/BeeView/tree/develop/docs/map-layers.md) for full details):
 
 - **Layer Controls** (top left): Toggle between visualizations:
   - **Land Use (LULC)**: Shows land cover classification (arable, grassland, forest, water, etc.)
@@ -432,9 +480,9 @@ The central map displays land cover classes using color-coded polygons:
 
 **[PLACEHOLDER: Add screenshot of sidebar with annotations]**
 
-The left panel provides data summaries and controls:
+The left panel provides data summaries and controls (see [Sidebar](https://github.com/xlandscape/BeeView/tree/develop/docs/sidebar.md) for full details):
 
-- **Run Selector**: Choose which simulation run to view (if multiple runs imported)
+- **Run Selector**: Choose which simulation run to view (if multiple runs imported) — see [Run Selection](https://github.com/xlandscape/BeeView/tree/develop/docs/run-selection.md)
 - **Layer Controls**: Toggle map layers on/off
 - **Statistics Panel**: Shows aggregated statistics for selected layer/time
 - **Feature List** (if features selected on map): Drill-down data for clicked parcels
@@ -443,7 +491,7 @@ The left panel provides data summaries and controls:
 
 **[PLACEHOLDER: Add screenshot of time series chart]**
 
-Below the map, the **Time Series Chart** displays:
+Below the map, the **Time Series Chart** displays (see [Nectar & Pollen Charts](https://github.com/xlandscape/BeeView/tree/develop/docs/charts-nectar-pollen.md)):
 
 - **X-axis**: Day of year (1-365)
 - **Y-axis**: Nectar or pollen availability [units/m²/day]
@@ -454,7 +502,7 @@ Below the map, the **Time Series Chart** displays:
 
 **[PLACEHOLDER: Add screenshot of bee population chart]**
 
-A secondary chart shows **colony metrics over time**:
+A secondary chart shows **colony metrics over time** (see [Bee Population Charts](https://github.com/xlandscape/BeeView/tree/develop/docs/charts-bee-population.md)):
 
 - **Worker bees**: Daily active foragers
 - **Brood**: Developing bee cohorts
@@ -491,7 +539,7 @@ For your untreated simulation, you should observe:
 
 - **Nectar/Pollen**: Strong seasonal patterns with peaks in spring/summer
 - **Bee Population**: Colony grows in spring as resources increase, shrinks in fall
-- **No pesticide exposure**: Pesticide widgets and exposures not visible (scenario is untreated)
+- **No pesticide exposure**: Pesticide widgets and exposures not visible (scenario is untreated). For treated runs, the Exposure tab shows daily residue timeseries — see [Exposure Charts](https://github.com/xlandscape/BeeView/tree/develop/docs/charts-exposure.md)
 
 **Sample observations**:
 - Day 60-150 (March-May): High nectar/pollen availability, growing bee population
@@ -508,6 +556,8 @@ For more sophisticated analyses, xPollinator supports **batch runs** using a **m
 - Multiple hive locations and treatment scenarios
 - Number of replicates per scenario
 - Pesticide application schedules
+
+The manifest controls how often applications are sampled for treated runs, but the full residue lifecycle is controlled by additional xPollinator and BEEHAVEecotox parameters described in [Pesticide Fate in xPollinator and BEEHAVEecotox](pesticide-fate.md).
 
 **Example manifest**: `xPollinator/scripts/Scenario-TarnEtGaronne_manifest.json`
 
@@ -617,26 +667,23 @@ Once multiple runs are imported, BeeView can compare them:
 3. **View Modes** (top right):
    - Switch from "Single Run" to "Compare Runs"
 
-4. **Comparison Matrix** displays:
+4. **Percentile Reduction Matrix** displays (see [Compare Runs](https://github.com/xlandscape/BeeView/tree/develop/docs/charts-compare.md) for full computation details):
 
-   **[PLACEHOLDER: Add screenshot of compare runs matrix]**
+   **[PLACEHOLDER: Add screenshot of percentile reduction matrix]**
 
-   - **Rows**: Baseline runs (e.g., untreated)
-   - **Columns**: Scenario runs (e.g., treated)
-   - **Cell values**: Survival probability (% of replicates reaching end-of-season threshold)
-   - **Color coding**: Red = survival decreased, Green = survival improved
+   The matrix is a **9×9 grid** where rows represent **spatial percentiles** (p10–p90 across hive locations) and columns represent **temporal percentiles** (p10–p90 across days). Each cell shows the percent reduction of colony size in the treated run relative to the untreated baseline.
 
-5. **Survival Probability Calculation**:
+   The computation follows four steps:
 
-   For each hive and treatment pair, BeeView calculates:
-   ```
-   Survival Probability = (# replicates with final workers ≥ 4000) / (total replicates)
-   ```
+   a. **Daily reduction per replicate pair**: For each day and matched replicate, compute the fractional colony-size reduction $r_i(d) = (B_i(d) - S_i(d)) / B_i(d)$, where $B$ is baseline (untreated) and $S$ is scenario (treated).
 
-   Example:
-   - If 85 out of 100 untreated replicates have ≥4000 workers on day 365 → 85% survival
-   - If 65 out of 100 treated replicates reach the same threshold → 65% survival
-   - **Effect** = Treated - Untreated = -20% (20% reduction in survival probability)
+   b. **Average across replicates**: Average the daily reductions across all replicate pairs within each spatial unit (hive location × landscape realisation).
+
+   c. **Temporal percentiles**: For each spatial unit, compute percentiles (p10–p90) across all simulation days. Low percentiles capture "good" days; high percentiles capture "worst" days.
+
+   d. **Spatial percentiles**: Across all spatial units, compute percentiles of each temporal percentile. Low percentiles represent mildly affected locations; high percentiles represent the most severely affected locations.
+
+   **Color coding**: White/green = negligible effect, yellow = 5–10%, orange = 10–20%, red = >20% reduction. Blue indicates the treated colony is larger (stochastic variability).
 
 ### 7.5 Interpreting Results
 
@@ -644,16 +691,16 @@ For the Tarn-et-Garonne multi-hive scenario:
 
 **Expected patterns**:
 
-- **Untreated hives**: Survival typically 70-90% depending on landscape forage quality
-- **Treated hives**: Survival reduced by 5-30% depending on application frequency and timing
-- **Hive location variation**: Hives in richer forage landscapes (more crop diversity) show better survival
-- **Replicates variation**: Visible as error bars on survival probabilities (result of ±100 different BEEHAVE random seeds)
+- **Low spatial + low temporal percentiles** (top-left corner): Represent the mildest effects — most locations on most days see little colony-size reduction
+- **High spatial + high temporal percentiles** (bottom-right corner): Represent worst-case combinations — the most affected locations on the worst days
+- **Diagonal trend**: Values typically increase from top-left to bottom-right
+- **Hive location variation**: Hives in richer forage landscapes show smaller reductions (lower spatial percentiles)
+- **Replicates**: Averaging across 100 BEEHAVE replicates per run smooths stochastic noise
 
-**Ecosystem risk perspective** (EFSA guidance):
+**Ecosystem risk perspective**:
 
-- EFSA considers a 10% reduction in colony survival as biologically significant
-- Multiple hives analyzed → Can estimate **landscape-level risk**
-- Compare across treatment scenarios to evaluate pesticide impacts
+- The spatial dimension of the matrix allows estimating **landscape-level risk** (what fraction of hive locations experience meaningful effects)
+- The temporal dimension shows whether effects are transient (high only at extreme percentiles) or persistent (high across all percentiles)
 
 ---
 
@@ -678,7 +725,7 @@ For the Tarn-et-Garonne multi-hive scenario:
    ls C:\xLandscape\BeeView-server\data\
    ```
 2. Check file permissions (should be readable by your user)
-3. Ensure `arr.dat` is not corrupted: HDF5 file should be >40 MB for Tarn-et-Garonne
+3. Ensure `arr.dat` is not corrupted: HDF5 file should be >40 MB for Tarn-et-Garonne-small
 4. Delete `data/beeview.duckdb` and restart server to force re-import
 
 ### Slow Performance
@@ -698,7 +745,7 @@ For the Tarn-et-Garonne multi-hive scenario:
 **Solution**:
 1. Check .xrun file has valid XML (no typos in tags)
 2. Verify coordinates are in correct CRS (UTM for Tarn-et-Garonne, EPSG:32631)
-3. Ensure scenario path exists: `C:\xLandscape\xPollinator\scenario\Tarn-et-Garonne\`
+3. Ensure scenario path exists: `C:\xLandscape\xPollinator\scenario\Tarn-et-Garonne-small\`
 4. Check disk space (needs ~500 MB per run)
 5. Re-run with unique `<SimID>` (don't overwrite previous runs)
 
@@ -709,9 +756,8 @@ For the Tarn-et-Garonne multi-hive scenario:
 ### For Risk Assessment Work
 
 1. **Adapt scenarios**: Modify landscape data or pesticide schedules for your region of interest
-2. **Regulatory compliance**: Document inputs/outputs per [EFSA Bee Guidance](https://efsa.onlinelibrary.wiley.com/doi/10.2903/j.efsa.2018.5224)
-3. **Sensitivity analysis**: Run multiple scenarios (e.g., different application timings) and compare survival curves
-4. **Population-level risk**: Use multi-hive results to estimate landscape-scale impact
+2. **Sensitivity analysis**: Run multiple scenarios (e.g., different application timings) and compare survival curves
+3. **Population-level risk**: Use multi-hive results to estimate landscape-scale impact
 
 ### For Advanced Customization
 
@@ -722,10 +768,11 @@ For the Tarn-et-Garonne multi-hive scenario:
 
 ### Resources
 
-- **xPollinator Documentation**: https://github.com/xlandscape/xPollinator/blob/main/docs/index.md
-- **xLandscape Framework**: https://github.com/xlandscape/xLandscape
-- **BeeView GitHub**: https://github.com/xlandscape/BeeView
-- **EFSA Guidance Document**: https://efsa.onlinelibrary.wiley.com/doi/10.2903/j.efsa.2018.5224
+- **xPollinator Documentation**: [xPollinator docs](https://github.com/xlandscape/xPollinator/blob/main/docs/index.md)
+- **xLandscape Framework**: [xLandscape GitHub](https://github.com/xlandscape/xLandscape)
+- **BeeView GitHub**: [BeeView repository](https://github.com/xlandscape/BeeView)
+- **BeeView User Guide**: [BeeView Documentation](https://github.com/xlandscape/BeeView/tree/develop/docs/index.md)
+- **Pesticide Fate Reference**: [Pesticide Fate in xPollinator and BEEHAVEecotox](pesticide-fate.md)
 
 ---
 
@@ -736,11 +783,21 @@ For the Tarn-et-Garonne multi-hive scenario:
 | Parameter | Type | Required | Description |
 |-----------|------|----------|-------------|
 | `SimID` | string | Yes | Unique simulation identifier (alphanumeric, no spaces) |
-| `Project` | string | Yes | Path to scenario folder (relative to `model/`) |
+| `Project` | string | Yes | Path to scenario folder (relative to repository root) |
+| `NumberMC` | integer | Yes | Number of Monte Carlo runs (single-run tutorial uses `1`) |
+| `SimulationStart` | date (YYYY-MM-DD) | Yes | Simulation start date |
+| `SimulationEnd` | date (YYYY-MM-DD) | Yes | Simulation end date |
 | `Manifest` | string | No | Path to manifest JSON for batch runs |
 | `NumberBeeHaveTimesteps` | integer | Yes | Simulation duration in days (typically 365) |
 | `BeeHaveMapCenterPointX` | float | Yes* | Hive X coordinate (UTM or project CRS) |
 | `BeeHaveMapCenterPointY` | float | Yes* | Hive Y coordinate (UTM or project CRS) |
+| `NumberBeeHaveReplicates` | integer | Yes | Number of BEEHAVE replicates |
+| `BeeHaveRandomSeed` | integer | Yes | Base random seed |
+| `BeeHaveWeather` | string | Yes | Weather profile used by BEEHAVE |
+| `MinNumberApplications` | integer | Yes | Minimum pesticide applications |
+| `MaxNumberApplications` | integer | Yes | Maximum pesticide applications |
+| `RunLabel` | string | Yes | Run label used for tracking outputs |
+| `HiveGroupId` | string or integer | Yes | Hive group identifier |
 
 *Only required if `Manifest` is not provided (single-run mode)
 
