@@ -1,0 +1,23 @@
+# Tutorial test workspace (QA validation)
+tutorial-test-workspace/
+
+# IDE and OS
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+
+# Node
+node_modules/
+package-lock.json
